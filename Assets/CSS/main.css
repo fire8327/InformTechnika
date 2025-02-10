@@ -588,6 +588,9 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .px-11 {
+    padding-inline: calc(var(--spacing) * 11);
+  }
   .px-\[45px\] {
     padding-inline: 45px;
   }
