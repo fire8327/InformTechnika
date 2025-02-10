@@ -623,6 +623,12 @@
   .text-\[\#2B7DE0\] {
     color: #2B7DE0;
   }
+  .text-\[\#333333\] {
+    color: #333333;
+  }
+  .text-\[333333\] {
+    color: 333333;
+  }
   .uppercase {
     text-transform: uppercase;
   }
