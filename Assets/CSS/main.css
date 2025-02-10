@@ -548,6 +548,9 @@
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .resize {
     resize: both;
   }
@@ -562,9 +565,6 @@
   }
   .justify-between {
     justify-content: space-between;
-  }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
   }
   .gap-11 {
     gap: calc(var(--spacing) * 11);
@@ -585,20 +585,8 @@
   .bg-\[\#F8F9FB\] {
     background-color: #F8F9FB;
   }
-  .bg-\[F8F9FB\] {
-    background-color: F8F9FB;
-  }
   .bg-white {
     background-color: var(--color-white);
-  }
-  .px-1 {
-    padding-inline: calc(var(--spacing) * 1);
-  }
-  .px-9 {
-    padding-inline: calc(var(--spacing) * 9);
-  }
-  .px-11 {
-    padding-inline: calc(var(--spacing) * 11);
   }
   .px-\[45px\] {
     padding-inline: 45px;
@@ -621,10 +609,6 @@
     --tw-leading: 135%;
     line-height: 135%;
   }
-  .leading-\[13\] {
-    --tw-leading: 13;
-    line-height: 13;
-  }
   .leading-\[13px\] {
     --tw-leading: 13px;
     line-height: 13px;
@@ -645,6 +629,11 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+}
+@layer base {
+  body {
+    font-family: Arial, sans-serif;
   }
 }
 @keyframes spin {
