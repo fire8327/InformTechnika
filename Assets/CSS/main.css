@@ -524,6 +524,9 @@
   .relative {
     position: relative;
   }
+  .mt-auto {
+    margin-top: auto;
+  }
   .block {
     display: block;
   }
@@ -541,6 +544,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .max-w-\[1200px\] {
+    max-width: 1200px;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -575,12 +581,18 @@
   .gap-\[30px\] {
     gap: 30px;
   }
+  .gap-\[60px\] {
+    gap: 60px;
+  }
   .gap-\[92px\] {
     gap: 92px;
   }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .bg-\[\#2F3338\] {
+    background-color: #2F3338;
   }
   .bg-\[\#F8F9FB\] {
     background-color: #F8F9FB;
@@ -596,6 +608,9 @@
   }
   .py-7 {
     padding-block: calc(var(--spacing) * 7);
+  }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
   }
   .text-base {
     font-size: var(--text-base);
