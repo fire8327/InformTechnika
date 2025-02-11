@@ -43,7 +43,13 @@
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.5929 12.4309L10.0529 8.89092C10.9036 7.86966 11.3278 6.55975 11.2373 5.23368C11.1468 3.90762 10.5485 2.6675 9.56695 1.77131C8.58539 0.875122 7.29609 0.391857 5.96729 0.422049C4.63848 0.452242 3.37247 0.993569 2.43263 1.93342C1.49278 2.87327 0.951449 4.13928 0.921256 5.46808C0.891063 6.79689 1.37433 8.08618 2.27052 9.06775C3.16671 10.0493 4.40683 10.6476 5.73289 10.7381C7.05895 10.8286 8.36886 10.4044 9.39012 9.55373L12.9301 13.0937L13.5929 12.4309ZM1.87418 5.59373C1.87418 4.75934 2.12161 3.94369 2.58517 3.24992C3.04873 2.55615 3.70761 2.01542 4.47849 1.69611C5.24936 1.3768 6.09761 1.29326 6.91597 1.45604C7.73433 1.61882 8.48604 2.02062 9.07604 2.61062C9.66604 3.20062 10.0678 3.95233 10.2306 4.77069C10.3934 5.58905 10.3099 6.4373 9.99055 7.20817C9.67125 7.97905 9.13052 8.63793 8.43675 9.10149C7.74298 9.56505 6.92732 9.81248 6.09293 9.81248C4.97443 9.81124 3.9021 9.36637 3.1112 8.57547C2.3203 7.78456 1.87543 6.71223 1.87418 5.59373Z" fill="#777777"/>
                         </svg>
-                        <input id="masked-input" type="text" class="text-[15px] leading-[20px] grow focus:outline-none focus:appearance-none" placeholder="MX  _  _  _  _  _  _  _  _  _  _">
+                        <div id="input-container" class="flex gap-1 items-center cursor-pointer w-fit">
+                            <span>MX</span>
+                            <!-- Генерация 10 инпутов -->
+                            <template id="input-template">
+                                <input type="text" maxlength="1" class="w-3 text-center border-b border-[#777777] focus:border-[#2B7DE0] outline-none cursor-pointer"/>
+                            </template>
+                        </div>
                     </div>
                     <button class="w-1/2 rounded-r-[2px] flex items-center justify-center gap-2 py-3 cursor-pointer transition-all duration-500 group border border-[#2B7DE0] bg-[#2B7DE0] hover:bg-[#468DE4] hover:border-[#468DE4] active:[box-shadow:inset_0_3px_8px_0_rgb(0_0_0_/_0.15)] active:bg-[#2B7DE0] active:border-[#2B7DE0]">      
                         <span class="text-[11px] leading-[16px] text-white transition-all duration-500 uppercase">поиск по номеру расчета</span>
@@ -342,31 +348,51 @@
     </main>  
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const input = document.getElementById("masked-input");
-      
-          input.addEventListener("input", function (e) {
-            // Убираем все пробелы и невалидные символы
-            let value = e.target.value
-              .toUpperCase() // Все буквы в верхний регистр
-              .replace(/[^A-Z0-9]/g, "") // Удаляем всё, кроме букв и цифр
-              .replace(/^MX/, ""); // Удаляем MX, если введено вручную
-      
-            // Добавляем пробел после каждого символа
-            value = value.split("").join(" ");
-      
-            // Форматируем значение: "MX" + пробел + символы с пробелами
-            e.target.value = `MX ${value}`.trim();
-          });
-      
-          // Ограничиваем длину ввода
-          input.addEventListener("keydown", function (e) {
-            const currentValue = e.target.value.replace(/\s/g, ""); // Убираем пробелы для подсчёта
-            if (currentValue.length >= 11 && e.key !== "Backspace") {
-              e.preventDefault(); // Блокируем ввод, если достигнут лимит
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('input-container');
+            const template = document.getElementById('input-template');
+            let finalValue = ''; // Переменная для хранения итогового значения
+
+            // Создаем 10 инпутов
+            for (let i = 0; i < 10; i++) {
+                const clone = template.content.cloneNode(true);
+                container.appendChild(clone);
             }
-          });
+
+            const inputs = container.querySelectorAll('input');
+
+            // Обработчик клика по контейнеру
+            container.addEventListener('click', () => {
+                inputs[0].focus();
+            });
+
+            // Обработчики для инпутов
+            inputs.forEach((input, index) => {
+                input.addEventListener('input', (e) => {
+                    updateFinalValue();
+
+                    if (e.target.value && index < inputs.length - 1) {
+                        inputs[index + 1].focus();
+                    }
+                });
+
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Backspace' && !e.target.value && index > 0) {
+                        inputs[index - 1].focus();
+                    }
+                });
+            });
+
+            // Функция обновления итогового значения
+            function updateFinalValue() {
+                finalValue = Array.from(inputs)
+                    .map(input => input.value || '_')
+                    .join(' ');
+            }
+
+            // Инициализация
+            updateFinalValue();
         });
-      </script>
+    </script>
 </body>
 </html>
