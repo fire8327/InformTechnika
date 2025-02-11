@@ -36,7 +36,321 @@
                     </button>
                 </div>
             </div>
+            <div class="pt-12 pb-6 px-6 bg-white border border-[#EFF1F5] flex flex-col gap-9 w-full items-center justify-center">
+                <p class="text-[#333333] text-2xl leading-[48px] font-boxed text-center">Поиск по расчетам</p>
+                <form class="w-full flex items-center">
+                    <div class="w-1/2 rounded-l-[2px] flex items-center h-full gap-3 px-4 border-[#EFF1F5] border-l border-y">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5929 12.4309L10.0529 8.89092C10.9036 7.86966 11.3278 6.55975 11.2373 5.23368C11.1468 3.90762 10.5485 2.6675 9.56695 1.77131C8.58539 0.875122 7.29609 0.391857 5.96729 0.422049C4.63848 0.452242 3.37247 0.993569 2.43263 1.93342C1.49278 2.87327 0.951449 4.13928 0.921256 5.46808C0.891063 6.79689 1.37433 8.08618 2.27052 9.06775C3.16671 10.0493 4.40683 10.6476 5.73289 10.7381C7.05895 10.8286 8.36886 10.4044 9.39012 9.55373L12.9301 13.0937L13.5929 12.4309ZM1.87418 5.59373C1.87418 4.75934 2.12161 3.94369 2.58517 3.24992C3.04873 2.55615 3.70761 2.01542 4.47849 1.69611C5.24936 1.3768 6.09761 1.29326 6.91597 1.45604C7.73433 1.61882 8.48604 2.02062 9.07604 2.61062C9.66604 3.20062 10.0678 3.95233 10.2306 4.77069C10.3934 5.58905 10.3099 6.4373 9.99055 7.20817C9.67125 7.97905 9.13052 8.63793 8.43675 9.10149C7.74298 9.56505 6.92732 9.81248 6.09293 9.81248C4.97443 9.81124 3.9021 9.36637 3.1112 8.57547C2.3203 7.78456 1.87543 6.71223 1.87418 5.59373Z" fill="#777777"/>
+                        </svg>
+                        <input id="masked-input" type="text" class="text-[15px] leading-[20px] grow focus:outline-none focus:appearance-none" placeholder="MX  _  _  _  _  _  _  _  _  _  _">
+                    </div>
+                    <button class="w-1/2 rounded-r-[2px] flex items-center justify-center gap-2 py-3 cursor-pointer transition-all duration-500 group border border-[#2B7DE0] bg-[#2B7DE0] hover:bg-[#468DE4] hover:border-[#468DE4] active:[box-shadow:inset_0_3px_8px_0_rgb(0_0_0_/_0.15)] active:bg-[#2B7DE0] active:border-[#2B7DE0]">      
+                        <span class="text-[11px] leading-[16px] text-white transition-all duration-500 uppercase">поиск по номеру расчета</span>
+                    </button>
+                </form>
+                <a href="#" class="text-[#2B7DE0] uppercase text-[11px] leading-[16px] transition-all duration-500 hover:text-[#333333] active:text-[#468DE4] self-end">расширенный поиск по расчетам</a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-6">
+            <p class="text-[13px] leading-[20px] text-[#777777] text-center">Последние просмотренные расчеты</p>
+            <div class="grid grid-cols-[10%_auto_8%_10%_7%_7%_9%_11%] gap-x-[26px] gap-y-5 text-[12px] leading-[14px]">
+                <div class="col-span-full bg-[#777777]/15 h-px -mb-0.5"></div>
+
+                <p class="text-[#777777]">Номер расчета</p>
+                <p class="text-[#777777]">Название</p>
+                <p class="text-[#777777]">Заказчик</p>
+                <p class="text-[#777777]">Объект</p>
+                <p class="text-[#777777]">Дата создания</p>
+                <p class="text-[#777777] text-center">Общий доступ</p>
+                <p class="text-[#777777]">Изменено</p>
+                <p class="text-[#777777]">Статус</p>
+
+                <div class="col-span-full bg-[#777777]/15 h-px -mt-0.5 mb-1"></div>
+
+                <a href="#" class="flex items-center gap-1.5 group">
+                    <svg class="fill-[#2B7DE0] group-hover:fill-[#333333] group-active:fill-[#468DE4] transition-all duration-500" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.1875 14.0625H2.8125C2.56394 14.0623 2.32562 13.9634 2.14986 13.7876C1.9741 13.6119 1.87525 13.3736 1.875 13.125V1.875C1.87525 1.62644 1.9741 1.38812 2.14986 1.21236C2.32562 1.0366 2.56394 0.937748 2.8125 0.9375H12.1875C12.4361 0.937748 12.6744 1.0366 12.8501 1.21236C13.0259 1.38812 13.1248 1.62644 13.125 1.875V13.125C13.1248 13.3736 13.0259 13.6119 12.8501 13.7876C12.6744 13.9634 12.4361 14.0623 12.1875 14.0625ZM2.8125 1.875V13.125H12.1875V1.875H2.8125Z"/>
+                        <path d="M4.21875 3.28125H9.375V4.21875H4.21875V3.28125ZM4.21875 5.625H7.5V6.5625H4.21875V5.625Z"/>
+                    </svg>
+                    <span class="uppercase underline text-[#2B7DE0] group-hover:text-[#333333] group-active:text-[#468DE4] transition-all duration-500">MXA2C3E5G7XYZ</span>
+                </a>
+                <p class="font-bold">Название длиною до 30 символов</p>
+                <p class="font-bold">Антипов Р.А.</p>
+                <p class="font-bold">Информтехника</p>
+                <p class="font-bold">23.12.2024</p>
+                <p class="font-bold text-center">–</p>
+                <p class="font-bold">23.02.2024 23:24</p>
+                <div class="flex items-center gap-[30px]">
+                    <p class="font-bold text-[#FB5F5F]">Не завершен</p>
+                    <button class="transition-all duration-500 cursor-pointer fill-[#2B7DE0] hover:fill-[#333333] active:fill-[#468DE4]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13H15V14H1V13ZM12.7 4.5C13.1 4.1 13.1 3.5 12.7 3.1L10.9 1.3C10.5 0.9 9.9 0.9 9.5 1.3L2 8.8V12H5.2L12.7 4.5ZM10.2 2L12 3.8L10.5 5.3L8.7 3.5L10.2 2ZM3 11V9.2L8 4.2L9.8 6L4.8 11H3Z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="flex items-center gap-1.5 group">
+                    <svg class="fill-[#2B7DE0] group-hover:fill-[#333333] group-active:fill-[#468DE4] transition-all duration-500" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.1875 14.0625H2.8125C2.56394 14.0623 2.32562 13.9634 2.14986 13.7876C1.9741 13.6119 1.87525 13.3736 1.875 13.125V1.875C1.87525 1.62644 1.9741 1.38812 2.14986 1.21236C2.32562 1.0366 2.56394 0.937748 2.8125 0.9375H12.1875C12.4361 0.937748 12.6744 1.0366 12.8501 1.21236C13.0259 1.38812 13.1248 1.62644 13.125 1.875V13.125C13.1248 13.3736 13.0259 13.6119 12.8501 13.7876C12.6744 13.9634 12.4361 14.0623 12.1875 14.0625ZM2.8125 1.875V13.125H12.1875V1.875H2.8125Z"/>
+                        <path d="M4.21875 3.28125H9.375V4.21875H4.21875V3.28125ZM4.21875 5.625H7.5V6.5625H4.21875V5.625Z"/>
+                    </svg>
+                    <span class="uppercase underline text-[#2B7DE0] group-hover:text-[#333333] group-active:text-[#468DE4] transition-all duration-500">MXA2C3E5G7XYZ</span>
+                </a>
+                <p class="font-bold">Название длиною до 30 символов</p>
+                <p class="font-bold">Антипов Р.А.</p>
+                <p class="font-bold">Информтехника</p>
+                <p class="font-bold">23.12.2024</p>
+                <p class="font-bold text-center">–</p>
+                <p class="font-bold">23.02.2024 23:24</p>
+                <div class="flex items-center gap-[30px]">
+                    <p class="font-bold text-[#FB5F5F]">Не завершен</p>
+                    <button class="transition-all duration-500 cursor-pointer fill-[#2B7DE0] hover:fill-[#333333] active:fill-[#468DE4]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13H15V14H1V13ZM12.7 4.5C13.1 4.1 13.1 3.5 12.7 3.1L10.9 1.3C10.5 0.9 9.9 0.9 9.5 1.3L2 8.8V12H5.2L12.7 4.5ZM10.2 2L12 3.8L10.5 5.3L8.7 3.5L10.2 2ZM3 11V9.2L8 4.2L9.8 6L4.8 11H3Z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="flex items-center gap-1.5 group">
+                    <svg class="fill-[#2B7DE0] group-hover:fill-[#333333] group-active:fill-[#468DE4] transition-all duration-500" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.1875 14.0625H2.8125C2.56394 14.0623 2.32562 13.9634 2.14986 13.7876C1.9741 13.6119 1.87525 13.3736 1.875 13.125V1.875C1.87525 1.62644 1.9741 1.38812 2.14986 1.21236C2.32562 1.0366 2.56394 0.937748 2.8125 0.9375H12.1875C12.4361 0.937748 12.6744 1.0366 12.8501 1.21236C13.0259 1.38812 13.1248 1.62644 13.125 1.875V13.125C13.1248 13.3736 13.0259 13.6119 12.8501 13.7876C12.6744 13.9634 12.4361 14.0623 12.1875 14.0625ZM2.8125 1.875V13.125H12.1875V1.875H2.8125Z"/>
+                        <path d="M4.21875 3.28125H9.375V4.21875H4.21875V3.28125ZM4.21875 5.625H7.5V6.5625H4.21875V5.625Z"/>
+                    </svg>
+                    <span class="uppercase underline text-[#2B7DE0] group-hover:text-[#333333] group-active:text-[#468DE4] transition-all duration-500">MXA2C3E5G7XYZ</span>
+                </a>
+                <p class="font-bold">Название длиною до 30 символов</p>
+                <p class="font-bold">Антипов Р.А.</p>
+                <p class="font-bold">Информтехника</p>
+                <p class="font-bold">23.12.2024</p>
+                <p class="font-bold text-center">Да</p>
+                <p class="font-bold">23.02.2024 23:24</p>
+                <div class="flex items-center gap-[30px]">
+                    <p class="font-bold text-[#FB5F5F]">Не завершен</p>
+                    <button class="transition-all duration-500 cursor-pointer fill-[#2B7DE0] hover:fill-[#333333] active:fill-[#468DE4]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13H15V14H1V13ZM12.7 4.5C13.1 4.1 13.1 3.5 12.7 3.1L10.9 1.3C10.5 0.9 9.9 0.9 9.5 1.3L2 8.8V12H5.2L12.7 4.5ZM10.2 2L12 3.8L10.5 5.3L8.7 3.5L10.2 2ZM3 11V9.2L8 4.2L9.8 6L4.8 11H3Z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="flex items-center gap-1.5 group">
+                    <svg class="fill-[#2B7DE0] group-hover:fill-[#333333] group-active:fill-[#468DE4] transition-all duration-500" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.1875 14.0625H2.8125C2.56394 14.0623 2.32562 13.9634 2.14986 13.7876C1.9741 13.6119 1.87525 13.3736 1.875 13.125V1.875C1.87525 1.62644 1.9741 1.38812 2.14986 1.21236C2.32562 1.0366 2.56394 0.937748 2.8125 0.9375H12.1875C12.4361 0.937748 12.6744 1.0366 12.8501 1.21236C13.0259 1.38812 13.1248 1.62644 13.125 1.875V13.125C13.1248 13.3736 13.0259 13.6119 12.8501 13.7876C12.6744 13.9634 12.4361 14.0623 12.1875 14.0625ZM2.8125 1.875V13.125H12.1875V1.875H2.8125Z"/>
+                        <path d="M4.21875 3.28125H9.375V4.21875H4.21875V3.28125ZM4.21875 5.625H7.5V6.5625H4.21875V5.625Z"/>
+                    </svg>
+                    <span class="uppercase underline text-[#2B7DE0] group-hover:text-[#333333] group-active:text-[#468DE4] transition-all duration-500">MXA2C3E5G7XYZ</span>
+                </a>
+                <p class="font-bold">Название длиною до 30 символов</p>
+                <p class="font-bold">Антипов Р.А.</p>
+                <p class="font-bold">Информтехника</p>
+                <p class="font-bold">23.12.2024</p>
+                <p class="font-bold text-center">–</p>
+                <p class="font-bold">23.02.2024 23:24</p>
+                <div class="flex items-center gap-[30px]">
+                    <p class="font-bold text-[#FB5F5F]">Не завершен</p>
+                    <button class="transition-all duration-500 cursor-pointer fill-[#2B7DE0] hover:fill-[#333333] active:fill-[#468DE4]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13H15V14H1V13ZM12.7 4.5C13.1 4.1 13.1 3.5 12.7 3.1L10.9 1.3C10.5 0.9 9.9 0.9 9.5 1.3L2 8.8V12H5.2L12.7 4.5ZM10.2 2L12 3.8L10.5 5.3L8.7 3.5L10.2 2ZM3 11V9.2L8 4.2L9.8 6L4.8 11H3Z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="flex items-center gap-1.5 group">
+                    <svg class="fill-[#2B7DE0] group-hover:fill-[#333333] group-active:fill-[#468DE4] transition-all duration-500" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.1875 14.0625H2.8125C2.56394 14.0623 2.32562 13.9634 2.14986 13.7876C1.9741 13.6119 1.87525 13.3736 1.875 13.125V1.875C1.87525 1.62644 1.9741 1.38812 2.14986 1.21236C2.32562 1.0366 2.56394 0.937748 2.8125 0.9375H12.1875C12.4361 0.937748 12.6744 1.0366 12.8501 1.21236C13.0259 1.38812 13.1248 1.62644 13.125 1.875V13.125C13.1248 13.3736 13.0259 13.6119 12.8501 13.7876C12.6744 13.9634 12.4361 14.0623 12.1875 14.0625ZM2.8125 1.875V13.125H12.1875V1.875H2.8125Z"/>
+                        <path d="M4.21875 3.28125H9.375V4.21875H4.21875V3.28125ZM4.21875 5.625H7.5V6.5625H4.21875V5.625Z"/>
+                    </svg>
+                    <span class="uppercase underline text-[#2B7DE0] group-hover:text-[#333333] group-active:text-[#468DE4] transition-all duration-500">MXA2C3E5G7XYZ</span>
+                </a>
+                <p class="font-bold">Название длиною до 30 символов</p>
+                <p class="font-bold">Антипов Р.А.</p>
+                <p class="font-bold">Информтехника</p>
+                <p class="font-bold">23.12.2024</p>
+                <p class="font-bold text-center">–</p>
+                <p class="font-bold">23.02.2024 23:24</p>
+                <div class="flex items-center gap-[30px]">
+                    <p class="font-bold text-[#FB5F5F]">Не завершен</p>
+                    <button class="transition-all duration-500 cursor-pointer fill-[#2B7DE0] hover:fill-[#333333] active:fill-[#468DE4]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13H15V14H1V13ZM12.7 4.5C13.1 4.1 13.1 3.5 12.7 3.1L10.9 1.3C10.5 0.9 9.9 0.9 9.5 1.3L2 8.8V12H5.2L12.7 4.5ZM10.2 2L12 3.8L10.5 5.3L8.7 3.5L10.2 2ZM3 11V9.2L8 4.2L9.8 6L4.8 11H3Z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="flex items-center gap-1.5 group">
+                    <svg class="fill-[#2B7DE0] group-hover:fill-[#333333] group-active:fill-[#468DE4] transition-all duration-500" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.1875 14.0625H2.8125C2.56394 14.0623 2.32562 13.9634 2.14986 13.7876C1.9741 13.6119 1.87525 13.3736 1.875 13.125V1.875C1.87525 1.62644 1.9741 1.38812 2.14986 1.21236C2.32562 1.0366 2.56394 0.937748 2.8125 0.9375H12.1875C12.4361 0.937748 12.6744 1.0366 12.8501 1.21236C13.0259 1.38812 13.1248 1.62644 13.125 1.875V13.125C13.1248 13.3736 13.0259 13.6119 12.8501 13.7876C12.6744 13.9634 12.4361 14.0623 12.1875 14.0625ZM2.8125 1.875V13.125H12.1875V1.875H2.8125Z"/>
+                        <path d="M4.21875 3.28125H9.375V4.21875H4.21875V3.28125ZM4.21875 5.625H7.5V6.5625H4.21875V5.625Z"/>
+                    </svg>
+                    <span class="uppercase underline text-[#2B7DE0] group-hover:text-[#333333] group-active:text-[#468DE4] transition-all duration-500">MXA2C3E5G7XYZ</span>
+                </a>
+                <p class="font-bold">Название длиною до 30 символов</p>
+                <p class="font-bold">Антипов Р.А.</p>
+                <p class="font-bold">Информтехника</p>
+                <p class="font-bold">23.12.2024</p>
+                <p class="font-bold text-center">–</p>
+                <p class="font-bold">23.02.2024 23:24</p>
+                <div class="flex items-center gap-[30px]">
+                    <p class="font-bold text-[#FB5F5F]">Не завершен</p>
+                    <button class="transition-all duration-500 cursor-pointer fill-[#2B7DE0] hover:fill-[#333333] active:fill-[#468DE4]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13H15V14H1V13ZM12.7 4.5C13.1 4.1 13.1 3.5 12.7 3.1L10.9 1.3C10.5 0.9 9.9 0.9 9.5 1.3L2 8.8V12H5.2L12.7 4.5ZM10.2 2L12 3.8L10.5 5.3L8.7 3.5L10.2 2ZM3 11V9.2L8 4.2L9.8 6L4.8 11H3Z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="flex items-center gap-1.5 group">
+                    <svg class="fill-[#2B7DE0] group-hover:fill-[#333333] group-active:fill-[#468DE4] transition-all duration-500" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.1875 14.0625H2.8125C2.56394 14.0623 2.32562 13.9634 2.14986 13.7876C1.9741 13.6119 1.87525 13.3736 1.875 13.125V1.875C1.87525 1.62644 1.9741 1.38812 2.14986 1.21236C2.32562 1.0366 2.56394 0.937748 2.8125 0.9375H12.1875C12.4361 0.937748 12.6744 1.0366 12.8501 1.21236C13.0259 1.38812 13.1248 1.62644 13.125 1.875V13.125C13.1248 13.3736 13.0259 13.6119 12.8501 13.7876C12.6744 13.9634 12.4361 14.0623 12.1875 14.0625ZM2.8125 1.875V13.125H12.1875V1.875H2.8125Z"/>
+                        <path d="M4.21875 3.28125H9.375V4.21875H4.21875V3.28125ZM4.21875 5.625H7.5V6.5625H4.21875V5.625Z"/>
+                    </svg>
+                    <span class="uppercase underline text-[#2B7DE0] group-hover:text-[#333333] group-active:text-[#468DE4] transition-all duration-500">MXA2C3E5G7XYZ</span>
+                </a>
+                <p class="font-bold">Название длиною до 30 символов</p>
+                <p class="font-bold">Антипов Р.А.</p>
+                <p class="font-bold">Информтехника</p>
+                <p class="font-bold">23.12.2024</p>
+                <p class="font-bold text-center">–</p>
+                <p class="font-bold">23.02.2024 23:24</p>
+                <div class="flex items-center gap-[30px]">
+                    <p class="font-bold text-[#FB5F5F]">Не завершен</p>
+                    <button class="transition-all duration-500 cursor-pointer fill-[#2B7DE0] hover:fill-[#333333] active:fill-[#468DE4]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13H15V14H1V13ZM12.7 4.5C13.1 4.1 13.1 3.5 12.7 3.1L10.9 1.3C10.5 0.9 9.9 0.9 9.5 1.3L2 8.8V12H5.2L12.7 4.5ZM10.2 2L12 3.8L10.5 5.3L8.7 3.5L10.2 2ZM3 11V9.2L8 4.2L9.8 6L4.8 11H3Z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="flex items-center gap-1.5 group">
+                    <svg class="fill-[#2B7DE0] group-hover:fill-[#333333] group-active:fill-[#468DE4] transition-all duration-500" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.1875 14.0625H2.8125C2.56394 14.0623 2.32562 13.9634 2.14986 13.7876C1.9741 13.6119 1.87525 13.3736 1.875 13.125V1.875C1.87525 1.62644 1.9741 1.38812 2.14986 1.21236C2.32562 1.0366 2.56394 0.937748 2.8125 0.9375H12.1875C12.4361 0.937748 12.6744 1.0366 12.8501 1.21236C13.0259 1.38812 13.1248 1.62644 13.125 1.875V13.125C13.1248 13.3736 13.0259 13.6119 12.8501 13.7876C12.6744 13.9634 12.4361 14.0623 12.1875 14.0625ZM2.8125 1.875V13.125H12.1875V1.875H2.8125Z"/>
+                        <path d="M4.21875 3.28125H9.375V4.21875H4.21875V3.28125ZM4.21875 5.625H7.5V6.5625H4.21875V5.625Z"/>
+                    </svg>
+                    <span class="uppercase underline text-[#2B7DE0] group-hover:text-[#333333] group-active:text-[#468DE4] transition-all duration-500">MXA2C3E5G7XYZ</span>
+                </a>
+                <p class="font-bold">Название длиною до 30 символов</p>
+                <p class="font-bold">Антипов Р.А.</p>
+                <p class="font-bold">Информтехника</p>
+                <p class="font-bold">23.12.2024</p>
+                <p class="font-bold text-center">Да</p>
+                <p class="font-bold">23.02.2024 23:24</p>
+                <div class="flex items-center gap-[30px]">
+                    <p class="font-bold text-[#FB5F5F]">Не завершен</p>
+                    <button class="transition-all duration-500 cursor-pointer fill-[#2B7DE0] hover:fill-[#333333] active:fill-[#468DE4]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13H15V14H1V13ZM12.7 4.5C13.1 4.1 13.1 3.5 12.7 3.1L10.9 1.3C10.5 0.9 9.9 0.9 9.5 1.3L2 8.8V12H5.2L12.7 4.5ZM10.2 2L12 3.8L10.5 5.3L8.7 3.5L10.2 2ZM3 11V9.2L8 4.2L9.8 6L4.8 11H3Z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="flex items-center gap-1.5 group">
+                    <svg class="fill-[#2B7DE0] group-hover:fill-[#333333] group-active:fill-[#468DE4] transition-all duration-500" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.1875 14.0625H2.8125C2.56394 14.0623 2.32562 13.9634 2.14986 13.7876C1.9741 13.6119 1.87525 13.3736 1.875 13.125V1.875C1.87525 1.62644 1.9741 1.38812 2.14986 1.21236C2.32562 1.0366 2.56394 0.937748 2.8125 0.9375H12.1875C12.4361 0.937748 12.6744 1.0366 12.8501 1.21236C13.0259 1.38812 13.1248 1.62644 13.125 1.875V13.125C13.1248 13.3736 13.0259 13.6119 12.8501 13.7876C12.6744 13.9634 12.4361 14.0623 12.1875 14.0625ZM2.8125 1.875V13.125H12.1875V1.875H2.8125Z"/>
+                        <path d="M4.21875 3.28125H9.375V4.21875H4.21875V3.28125ZM4.21875 5.625H7.5V6.5625H4.21875V5.625Z"/>
+                    </svg>
+                    <span class="uppercase underline text-[#2B7DE0] group-hover:text-[#333333] group-active:text-[#468DE4] transition-all duration-500">MXA2C3E5G7XYZ</span>
+                </a>
+                <p class="font-bold">Название длиною до 30 символов</p>
+                <p class="font-bold">Антипов Р.А.</p>
+                <p class="font-bold">Информтехника</p>
+                <p class="font-bold">23.12.2024</p>
+                <p class="font-bold text-center">–</p>
+                <p class="font-bold">23.02.2024 23:24</p>
+                <div class="flex items-center gap-[30px]">
+                    <p class="font-bold text-[#FB5F5F]">Не завершен</p>
+                    <button class="transition-all duration-500 cursor-pointer fill-[#2B7DE0] hover:fill-[#333333] active:fill-[#468DE4]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13H15V14H1V13ZM12.7 4.5C13.1 4.1 13.1 3.5 12.7 3.1L10.9 1.3C10.5 0.9 9.9 0.9 9.5 1.3L2 8.8V12H5.2L12.7 4.5ZM10.2 2L12 3.8L10.5 5.3L8.7 3.5L10.2 2ZM3 11V9.2L8 4.2L9.8 6L4.8 11H3Z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="flex items-center gap-1.5 group">
+                    <svg class="fill-[#2B7DE0] group-hover:fill-[#333333] group-active:fill-[#468DE4] transition-all duration-500" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.1875 14.0625H2.8125C2.56394 14.0623 2.32562 13.9634 2.14986 13.7876C1.9741 13.6119 1.87525 13.3736 1.875 13.125V1.875C1.87525 1.62644 1.9741 1.38812 2.14986 1.21236C2.32562 1.0366 2.56394 0.937748 2.8125 0.9375H12.1875C12.4361 0.937748 12.6744 1.0366 12.8501 1.21236C13.0259 1.38812 13.1248 1.62644 13.125 1.875V13.125C13.1248 13.3736 13.0259 13.6119 12.8501 13.7876C12.6744 13.9634 12.4361 14.0623 12.1875 14.0625ZM2.8125 1.875V13.125H12.1875V1.875H2.8125Z"/>
+                        <path d="M4.21875 3.28125H9.375V4.21875H4.21875V3.28125ZM4.21875 5.625H7.5V6.5625H4.21875V5.625Z"/>
+                    </svg>
+                    <span class="uppercase underline text-[#2B7DE0] group-hover:text-[#333333] group-active:text-[#468DE4] transition-all duration-500">MXA2C3E5G7XYZ</span>
+                </a>
+                <p class="font-bold">Название длиною до 30 символов</p>
+                <p class="font-bold">Антипов Р.А.</p>
+                <p class="font-bold">Информтехника</p>
+                <p class="font-bold">23.12.2024</p>
+                <p class="font-bold text-center">–</p>
+                <p class="font-bold">23.02.2024 23:24</p>
+                <div class="flex items-center gap-[30px]">
+                    <p class="font-bold text-[#FB5F5F]">Не завершен</p>
+                    <button class="transition-all duration-500 cursor-pointer fill-[#2B7DE0] hover:fill-[#333333] active:fill-[#468DE4]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13H15V14H1V13ZM12.7 4.5C13.1 4.1 13.1 3.5 12.7 3.1L10.9 1.3C10.5 0.9 9.9 0.9 9.5 1.3L2 8.8V12H5.2L12.7 4.5ZM10.2 2L12 3.8L10.5 5.3L8.7 3.5L10.2 2ZM3 11V9.2L8 4.2L9.8 6L4.8 11H3Z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="flex items-center gap-1.5 group">
+                    <svg class="fill-[#2B7DE0] group-hover:fill-[#333333] group-active:fill-[#468DE4] transition-all duration-500" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.1875 14.0625H2.8125C2.56394 14.0623 2.32562 13.9634 2.14986 13.7876C1.9741 13.6119 1.87525 13.3736 1.875 13.125V1.875C1.87525 1.62644 1.9741 1.38812 2.14986 1.21236C2.32562 1.0366 2.56394 0.937748 2.8125 0.9375H12.1875C12.4361 0.937748 12.6744 1.0366 12.8501 1.21236C13.0259 1.38812 13.1248 1.62644 13.125 1.875V13.125C13.1248 13.3736 13.0259 13.6119 12.8501 13.7876C12.6744 13.9634 12.4361 14.0623 12.1875 14.0625ZM2.8125 1.875V13.125H12.1875V1.875H2.8125Z"/>
+                        <path d="M4.21875 3.28125H9.375V4.21875H4.21875V3.28125ZM4.21875 5.625H7.5V6.5625H4.21875V5.625Z"/>
+                    </svg>
+                    <span class="uppercase underline text-[#2B7DE0] group-hover:text-[#333333] group-active:text-[#468DE4] transition-all duration-500">MXA2C3E5G7XYZ</span>
+                </a>
+                <p class="font-bold">Название длиною до 30 символов</p>
+                <p class="font-bold">Антипов Р.А.</p>
+                <p class="font-bold">Информтехника</p>
+                <p class="font-bold">23.12.2024</p>
+                <p class="font-bold text-center">–</p>
+                <p class="font-bold">23.02.2024 23:24</p>
+                <div class="flex items-center gap-[30px]">
+                    <p class="font-bold text-[#FB5F5F]">Не завершен</p>
+                    <button class="transition-all duration-500 cursor-pointer fill-[#2B7DE0] hover:fill-[#333333] active:fill-[#468DE4]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13H15V14H1V13ZM12.7 4.5C13.1 4.1 13.1 3.5 12.7 3.1L10.9 1.3C10.5 0.9 9.9 0.9 9.5 1.3L2 8.8V12H5.2L12.7 4.5ZM10.2 2L12 3.8L10.5 5.3L8.7 3.5L10.2 2ZM3 11V9.2L8 4.2L9.8 6L4.8 11H3Z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="flex items-center gap-1.5 group">
+                    <svg class="fill-[#2B7DE0] group-hover:fill-[#333333] group-active:fill-[#468DE4] transition-all duration-500" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.1875 14.0625H2.8125C2.56394 14.0623 2.32562 13.9634 2.14986 13.7876C1.9741 13.6119 1.87525 13.3736 1.875 13.125V1.875C1.87525 1.62644 1.9741 1.38812 2.14986 1.21236C2.32562 1.0366 2.56394 0.937748 2.8125 0.9375H12.1875C12.4361 0.937748 12.6744 1.0366 12.8501 1.21236C13.0259 1.38812 13.1248 1.62644 13.125 1.875V13.125C13.1248 13.3736 13.0259 13.6119 12.8501 13.7876C12.6744 13.9634 12.4361 14.0623 12.1875 14.0625ZM2.8125 1.875V13.125H12.1875V1.875H2.8125Z"/>
+                        <path d="M4.21875 3.28125H9.375V4.21875H4.21875V3.28125ZM4.21875 5.625H7.5V6.5625H4.21875V5.625Z"/>
+                    </svg>
+                    <span class="uppercase underline text-[#2B7DE0] group-hover:text-[#333333] group-active:text-[#468DE4] transition-all duration-500">MXA2C3E5G7XYZ</span>
+                </a>
+                <p class="font-bold">Название длиною до 30 символов</p>
+                <p class="font-bold">Антипов Р.А.</p>
+                <p class="font-bold">Информтехника</p>
+                <p class="font-bold">23.12.2024</p>
+                <p class="font-bold text-center">–</p>
+                <p class="font-bold">23.02.2024 23:24</p>
+                <div class="flex items-center gap-[30px]">
+                    <p class="font-bold text-[#FB5F5F]">Не завершен</p>
+                    <button class="transition-all duration-500 cursor-pointer fill-[#2B7DE0] hover:fill-[#333333] active:fill-[#468DE4]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13H15V14H1V13ZM12.7 4.5C13.1 4.1 13.1 3.5 12.7 3.1L10.9 1.3C10.5 0.9 9.9 0.9 9.5 1.3L2 8.8V12H5.2L12.7 4.5ZM10.2 2L12 3.8L10.5 5.3L8.7 3.5L10.2 2ZM3 11V9.2L8 4.2L9.8 6L4.8 11H3Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <button class="rounded-[2px] flex items-center justify-center gap-2 py-3 cursor-pointer transition-all duration-500 group border border-[#BFD8F6] w-full hover:bg-[#468DE4] hover:border-[#468DE4] active:[box-shadow:inset_0_3px_8px_0_rgb(0_0_0_/_0.15)]">
+                <svg class="fill-[#2B7DE0] group-hover:fill-white group-active:fill-white transition-all duration-500" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.625 5.18749H3.17813C3.78438 4.25576 4.67551 3.54491 5.71867 3.16088C6.76183 2.77686 7.90116 2.74023 8.96683 3.05645C10.0325 3.37267 10.9675 4.02482 11.6323 4.91567C12.2972 5.80653 12.6563 6.88839 12.6563 7.99999H13.5938C13.595 6.74631 13.2096 5.52275 12.4901 4.49613C11.7705 3.46952 10.7518 2.68982 9.5729 2.26336C8.39398 1.8369 7.11223 1.78444 5.9024 2.11312C4.69257 2.44179 3.61357 3.13562 2.8125 4.09999V2.37499H1.875V6.12499H5.625V5.18749ZM9.375 10.8125H11.8219C11.2156 11.7442 10.3245 12.4551 9.28134 12.8391C8.23818 13.2231 7.09885 13.2597 6.03317 12.9435C4.9675 12.6273 4.03255 11.9752 3.3677 11.0843C2.70284 10.1934 2.34368 9.11159 2.34375 7.99999H1.40625C1.40496 9.25366 1.79038 10.4772 2.50994 11.5038C3.2295 12.5305 4.24819 13.3102 5.42711 13.7366C6.60602 14.1631 7.88778 14.2155 9.09761 13.8869C10.3074 13.5582 11.3864 12.8644 12.1875 11.9V13.625H13.125V9.87499H9.375V10.8125Z"/>
+                </svg>                    
+                <span class="text-[11px] leading-[16px] text-[#2B7DE0] group-hover:text-white group-active:text-white transition-all duration-500 uppercase">загрузить больше</span>
+            </button>
         </div>
     </main>  
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const input = document.getElementById("masked-input");
+      
+          input.addEventListener("input", function (e) {
+            let value = e.target.value.replace(/\D/g, ""); // Убираем всё, кроме цифр
+            value = value.slice(0, 9); // Ограничиваем 9 символами
+            e.target.value = `MX ${value.padEnd(9, "_")}`; // Форматируем значение
+          });
+        });
+    </script>
 </body>
 </html>
