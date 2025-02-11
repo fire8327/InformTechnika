@@ -1,7 +1,20 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Boxed';
+  src: url('../Fonts/BoxedBook.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
     body {
       font-family: Arial, sans-serif;
     }
+}
+
+@layer utilities {
+  .font-boxed {
+    font-family: "Boxed", sans-serif;
+  }
 }
