@@ -30,8 +30,78 @@
                 <p class="text-[#333333] text-2xl leading-[17px] font-boxed text-center">Карточка расчета</p>    
             </div>
             <div class="flex w-full">
-                <div class="w-3/5 px-8 py-9 flex flex-col gap-9">
+                <div class="w-3/5 px-8 py-9 flex flex-col gap-9 h-full">
+                    <div class="flex flex-col gap-4 mb-3">
+                        <div class="text-[10px] leading-[13px] uppercase text-[#777777]">номер расчета</div>
+                        <p class="text-[#333333] text-[40px] leading-[28px] font-boxed">№00014523</p>
+                    </div>
 
+                    <div class="flex flex-col gap-9 text-[15px] leading-[20px]">
+                        <div class="group w-full relative">
+                            <input type="text" placeholder=" " class="w-full border-b border-[#E1E1E1] focus:outline-none pb-3 peer" required>
+                            <p class="text-[#777777] absolute top-0 pointer-events-none transition-all duration-500 peer-[&:not(:placeholder-shown)]:text-[13px] peer-[&:not(:placeholder-shown)]:leading-[18px] peer-[&:not(:placeholder-shown)]:-top-[25px]">Название расчета (До 30 символов) <span class="text-[#FB5F5F]">*</span></p>
+                            <img src="../Assets/Images/input/valid.svg" alt="" class="absolute top-[3px] right-0 opacity-0">
+                        </div>
+                        <div class="group w-full relative">
+                            <input type="text" placeholder=" " class="w-full border-b border-[#E1E1E1] focus:outline-none pb-3 peer" required>
+                            <p class="text-[#777777] absolute top-0 pointer-events-none transition-all duration-500 peer-[&:not(:placeholder-shown)]:text-[13px] peer-[&:not(:placeholder-shown)]:leading-[18px] peer-[&:not(:placeholder-shown)]:-top-[25px]">Заказчик <span class="text-[#FB5F5F]">*</span></p>
+                            <img src="../Assets/Images/input/valid.svg" alt="" class="absolute top-[3px] right-0">
+                        </div>
+                        <div class="group w-full relative">
+                            <input type="text" placeholder=" " class="w-full border-b border-[#E1E1E1] focus:outline-none pb-3 peer" required>
+                            <p class="text-[#777777] absolute top-0 pointer-events-none transition-all duration-500 peer-[&:not(:placeholder-shown)]:text-[13px] peer-[&:not(:placeholder-shown)]:leading-[18px] peer-[&:not(:placeholder-shown)]:-top-[25px]">Объект <span class="text-[#FB5F5F]">*</span></p>
+                            <img src="../Assets/Images/input/invalid.svg" alt="" class="absolute top-[3px] right-0">
+                            <p class="mt-[7px] text-[13px] leading-[18px] text-[#FB5F5F]">Описание возникшей ошибки</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-12 text-[13px] leading-[18px]">
+                        <div class="flex items-center gap-[34px]">
+                            <p class="font-bold text-[15px] leading-[20px] w-[73px]">Создано</p>
+                            <p class="text-[#777777]">16 декабря 2024, 23:53:22</p>
+                        </div>
+                        <div class="flex items-center gap-[34px]">
+                            <p class="font-bold text-[15px] leading-[20px] w-[73px]">Изменено</p>
+                            <p class="text-[#777777]">19 декабря 2024, 12:09:21</p>
+                        </div>
+                    </div>
+
+                    <label class="flex items-center gap-4 cursor-pointer group">
+                        <span class="text-[15px] leading-[20px] font-bold">Пересчитать</span>
+                        <input type="checkbox" name="sharedAccess" class="sr-only">
+                        <div class="w-[33px] h-[18px] relative border border-[#E1E1E1] rounded-[20px] transition-all duration-500 flex items-center px-[2px] group-has-[input:checked]:bg-[#2B7DE0] group-has-[input:checked]:border-[#2B7DE0]">
+                            <div class="w-[14px] h-[14px] bg-[#E1E1E1] rounded-full transition-all duration-500 group-has-[input:checked]:bg-white group-has-[input:checked]:translate-x-full"></div>
+                        </div>
+                    </label>
+
+                    <div class="flex items-center gap-3 justify-end flex-wrap text-[11px] leading-[16px]">
+                        <button class="w-[40%] rounded-[2px] flex items-center justify-center gap-2 py-3 cursor-pointer transition-all duration-500 bg-[#2B7DE0] border border-[#2B7DE0] hover:bg-[#468DE4] hover:border-[#468DE4] active:[box-shadow:inset_0_3px_8px_0_rgb(0_0_0_/_0.15)]">
+                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.25 2.375V13.0391L7.92188 11.3562L7.5 11.1453L7.07812 11.3562L3.75 13.0391V2.375H11.25ZM11.25 1.4375H3.75C3.50136 1.4375 3.2629 1.53627 3.08709 1.71209C2.91127 1.8879 2.8125 2.12636 2.8125 2.375V14.5625L7.5 12.2188L12.1875 14.5625V2.375C12.1875 2.12636 12.0887 1.8879 11.9129 1.71209C11.7371 1.53627 11.4986 1.4375 11.25 1.4375Z" fill="white"/>
+                            </svg>
+                            <span class="text-white uppercase">Сохранить карточку расчета</span>
+                        </button>
+                        <button class="w-[28%] rounded-[2px] flex items-center justify-center gap-2 py-3 group cursor-pointer transition-all duration-500 border border-[#BFD8F6] hover:bg-[#468DE4] hover:border-[#468DE4] active:[box-shadow:inset_0_3px_8px_0_rgb(0_0_0_/_0.15)]">
+                            <svg class="fill-[#2B7DE0] transition-all duration-500 group-hover:fill-white" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.9375 12.6875H14.0625V13.625H0.9375V12.6875ZM11.9062 4.71875C12.2812 4.34375 12.2812 3.78125 11.9062 3.40625L10.2187 1.71875C9.84375 1.34375 9.28125 1.34375 8.90625 1.71875L1.875 8.75V11.75H4.875L11.9062 4.71875ZM9.5625 2.375L11.25 4.0625L9.84375 5.46875L8.15625 3.78125L9.5625 2.375ZM2.8125 10.8125V9.125L7.5 4.4375L9.1875 6.125L4.5 10.8125H2.8125Z"/>
+                            </svg>                                
+                            <span class="text-[#2B7DE0] transition-all duration-500 group-hover:text-white uppercase">изменить расчет</span>
+                        </button>
+                        <button class="w-[28%] rounded-[2px] flex items-center justify-center gap-2 py-3 group cursor-pointer transition-all duration-500 border border-[#BFD8F6] hover:bg-[#468DE4] hover:border-[#468DE4] active:[box-shadow:inset_0_3px_8px_0_rgb(0_0_0_/_0.15)]">
+                            <svg class="fill-[#2B7DE0] transition-all duration-500 group-hover:fill-white" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.125 5.1875V13.625H4.6875V5.1875H13.125ZM13.125 4.25H4.6875C4.43886 4.25 4.2004 4.34877 4.02459 4.52459C3.84877 4.7004 3.75 4.93886 3.75 5.1875V13.625C3.75 13.8736 3.84877 14.1121 4.02459 14.2879C4.2004 14.4637 4.43886 14.5625 4.6875 14.5625H13.125C13.3736 14.5625 13.6121 14.4637 13.7879 14.2879C13.9637 14.1121 14.0625 13.8736 14.0625 13.625V5.1875C14.0625 4.93886 13.9637 4.7004 13.7879 4.52459C13.6121 4.34877 13.3736 4.25 13.125 4.25Z"/>
+                                <path d="M1.875 8.9375H0.9375V2.375C0.9375 2.12636 1.03627 1.8879 1.21209 1.71209C1.3879 1.53627 1.62636 1.4375 1.875 1.4375H8.4375V2.375H1.875V8.9375Z"/>
+                            </svg>                                
+                            <span class="text-[#2B7DE0] transition-all duration-500 group-hover:text-white uppercase">Копировать</span>
+                        </button>
+                        <button class="w-[28%] rounded-[2px] flex items-center justify-center gap-2 py-3 group cursor-pointer transition-all duration-500 border border-[#BFD8F6] hover:bg-[#468DE4] hover:border-[#468DE4] active:[box-shadow:inset_0_3px_8px_0_rgb(0_0_0_/_0.15)]">
+                            <svg class="fill-[#2B7DE0] transition-all duration-500 group-hover:fill-white" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.1875 14.5625H2.8125C2.56394 14.5623 2.32562 14.4634 2.14986 14.2876C1.9741 14.1119 1.87525 13.8736 1.875 13.625V2.375C1.87525 2.12644 1.9741 1.88812 2.14986 1.71236C2.32562 1.5366 2.56394 1.43775 2.8125 1.4375H12.1875C12.4361 1.43775 12.6744 1.5366 12.8501 1.71236C13.0259 1.88812 13.1248 2.12644 13.125 2.375V13.625C13.1248 13.8736 13.0259 14.1119 12.8501 14.2876C12.6744 14.4634 12.4361 14.5623 12.1875 14.5625ZM2.8125 2.375V13.625H12.1875V2.375H2.8125Z"/>
+                                <path d="M4.21875 3.78125H9.375V4.71875H4.21875V3.78125ZM4.21875 6.125H7.5V7.0625H4.21875V6.125Z"/>
+                            </svg>                                
+                            <span class="text-[#2B7DE0] transition-all duration-500 group-hover:text-white uppercase">Копировать</span>
+                        </button>
+                    </div>
                 </div>
                 <div class="w-px h-full bg-[#EFF1F5]"></div>
                 <div class="w-2/5 px-8 py-9 flex flex-col gap-9">
