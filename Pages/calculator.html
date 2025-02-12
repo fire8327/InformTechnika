@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор КАТС</title>
+    <link rel="stylesheet" href="../Assets/CSS/main.css">
+</head>
+<body class="flex flex-col min-h-screen bg-[#F8F9FB]">
+    <main class="grow mt-9 mb-[76px] flex flex-col gap-7 max-w-[1200px] mx-auto w-full text-[#333333]">
+        <div class="flex items-center justify-between text-[13px] leading-[20px] text-[#777777]">
+            <nav class="flex items-center justify-center gap-[11px]">
+                <a href="#">Профиль</a>
+                <div class="w-[13px] h-px bg-[#777777]"></div>
+                <a href="#">Управление расчетами</a>
+                <div class="w-[13px] h-px bg-[#777777]"></div>
+                <a href="#">Расчет №00014523</a>
+                <div class="w-[13px] h-px bg-[#777777]"></div>
+                <p>Карточка расчета </p>
+            </nav>
+            <p>Информтехника | Режаметов Р. Ю. </p>
+        </div>
+
+        <div class="w-full bg-white border border-[#EFF1F5] rounded-[4px] flex flex-col">
+            <div class="flex items-center gap-3 py-6 pl-8 border-b border-[#EFF1F5]">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.3125 3.12488V21.8749H4.6875V3.12488H20.3125ZM20.3125 1.56238H4.6875C4.2731 1.56238 3.87567 1.727 3.58265 2.02002C3.28962 2.31305 3.125 2.71048 3.125 3.12488V21.8749C3.125 22.2893 3.28962 22.6867 3.58265 22.9797C3.87567 23.2728 4.2731 23.4374 4.6875 23.4374H20.3125C20.7269 23.4374 21.1243 23.2728 21.4174 22.9797C21.7104 22.6867 21.875 22.2893 21.875 21.8749V3.12488C21.875 2.71048 21.7104 2.31305 21.4174 2.02002C21.1243 1.727 20.7269 1.56238 20.3125 1.56238Z" fill="#2B7DE0"/>
+                    <path d="M7.03125 17.9686H8.59375V19.5311H7.03125V17.9686ZM16.4062 17.9686H17.9688V19.5311H16.4062V17.9686ZM7.03125 14.0624H8.59375V15.6249H7.03125V14.0624ZM16.4062 14.0624H17.9688V15.6249H16.4062V14.0624ZM7.03125 10.1561H8.59375V11.7186H7.03125V10.1561ZM11.7188 17.9686H13.2812V19.5311H11.7188V17.9686ZM11.7188 14.0624H13.2812V15.6249H11.7188V14.0624ZM11.7188 10.1561H13.2812V11.7186H11.7188V10.1561ZM16.4062 10.1561H17.9688V11.7186H16.4062V10.1561ZM7.03125 5.46863H17.9688V7.81238H7.03125V5.46863Z" fill="#2B7DE0"/>
+                </svg>
+                <p class="text-[#333333] text-2xl leading-[17px] font-boxed text-center">Карточка расчета</p>    
+            </div>
+            <div class="flex w-full">
+                <div class="w-3/5 px-8 py-9 flex flex-col gap-9">
+
+                </div>
+                <div class="w-px h-full bg-[#EFF1F5]"></div>
+                <div class="w-2/5 px-8 py-9 flex flex-col gap-9">
+                    <div class="flex flex-col gap-6">
+                        <div class="flex gap-[34px]">
+                            <p class="text-[15px] leading-[20px] font-bold w-[122px]">Цена РРЦ</p>
+                            <div class="flex flex-col gap-1.5">
+                                <p class="text-[15px] leading-[20px] text-[#2B7DE0]">245 523,35 руб.</p>
+                                <p class="text-[13px] leading-[18px] text-[#777777]">Общая стоимость расчета (с НДС)</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-[34px]">
+                            <p class="text-[15px] leading-[20px] font-bold w-[122px]">Лицензии с НДС</p>
+                            <label class="flex items-center gap-4 cursor-pointer group">
+                                <span class="text-[13px] leading-[20px]">Пересчитать</span>
+                                <input type="checkbox" name="recalculate" class="sr-only">
+                                <div class="w-[33px] h-[18px] relative border border-[#E1E1E1] rounded-[20px] transition-all duration-500 flex items-center px-[2px] group-has-[input:checked]:bg-[#2B7DE0] group-has-[input:checked]:border-[#2B7DE0]">
+                                    <div class="w-[14px] h-[14px] bg-[#E1E1E1] rounded-full transition-all duration-500 group-has-[input:checked]:bg-white group-has-[input:checked]:translate-x-full"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <p class="text-[15px] leading-[20px] font-bold">Описание расчета</p>
+                        <div class="flex gap-[18px] border border-[#E1E1E1] rounded-[4px] p-[18px]">
+                            <!-- Блок с контентом -->
+                            <div id="content" class="h-[360px] text-[13px] leading-[18px] text-[#777777] overflow-y-auto no-scrollbar">
+                                <p>
+                                    Группа компаний "ИНФОРМТЕХНИКА" в полной мере использует интеллектуальную мощь российских разработчиков. В процессе
+                                    разработки телекоммуникационного оборудования используются лучшие мировые технологии, основанные на системах
+                                    автоматизированного проектирования, программирования и внутрисхемной эмуляции.
+                                    В выпускаемых изделиях широко применяются элементы конструкций и электронные компоненты поверхностного монтажа от
+                                    лучших мировых производителей, таких как Infineon, Intel, Analog Devices, National Semiconductor и др. Компания
+                                    имеет сертификат на соответствие качества производства своего оборудования требованиям международного стандарта ISO
+                                    9001. <br><br> Каждый этап проекта сопровождается тщательным контролем на соответствие стандартам ETSI. Для этого
+                                    производственные лаборатории компании оснащены самым
+                                </p>
+                                <p>
+                                    Группа компаний "ИНФОРМТЕХНИКА" в полной мере использует интеллектуальную мощь российских разработчиков. В процессе
+                                    разработки телекоммуникационного оборудования используются лучшие мировые технологии, основанные на системах
+                                    автоматизированного проектирования, программирования и внутрисхемной эмуляции.
+                                    В выпускаемых изделиях широко применяются элементы конструкций и электронные компоненты поверхностного монтажа от
+                                    лучших мировых производителей, таких как Infineon, Intel, Analog Devices, National Semiconductor и др. Компания
+                                    имеет сертификат на соответствие качества производства своего оборудования требованиям международного стандарта ISO
+                                    9001. <br><br> Каждый этап проекта сопровождается тщательным контролем на соответствие стандартам ETSI. Для этого
+                                    производственные лаборатории компании оснащены самым
+                                </p>
+                            </div>
+
+                            <!-- Блок для кастомного скроллбара -->
+                            <div id="custom-scrollbar" class="w-[3px] bg-[#F8F9FB] rounded-[2px] relative">
+                                <div id="scroll-thumb" class="w-[3px] bg-[#2B7DE0] rounded-[2px] absolute top-0"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <p class="text-[15px] leading-[20px] font-bold">Результаты расчета</p>
+                        <div class="flex items-center gap-x-8 gap-y-3 flex-wrap uppercase text-[11px] leading-[16px]">
+                            <a href="#" class="transition-all duration-500 text-[#2B7DE0] hover:text-[#333333] active:text-[#468DE4]">Просмотр расчета (html)</a>
+                            <a href="#" class="transition-all duration-500 text-[#2B7DE0] hover:text-[#333333] active:text-[#468DE4]">Сводка параметров (html)</a>
+                            <a href="#" class="transition-all duration-500 text-[#2B7DE0] hover:text-[#333333] active:text-[#468DE4]">Скачать спецификацию</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>  
+
+    <script>
+        const content = document.getElementById('content');
+        const scrollThumb = document.getElementById('scroll-thumb');
+        const customScrollbar = document.getElementById('custom-scrollbar');
+
+        // Вычисляем высоту ползунка
+        const thumbHeight = customScrollbar.offsetHeight * (customScrollbar.offsetHeight / content.scrollHeight);
+        scrollThumb.style.height = `${thumbHeight}px`;
+
+        // Обработчик скролла контента
+        content.addEventListener('scroll', () => {
+            const scrollPercentage = content.scrollTop / (content.scrollHeight - content.offsetHeight);
+            const thumbPosition = scrollPercentage * (customScrollbar.offsetHeight - scrollThumb.offsetHeight);
+            scrollThumb.style.top = `${thumbPosition}px`;
+        });
+
+        // Обработчик перемещения ползунка
+        let isDragging = false;
+
+        scrollThumb.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+                document.removeEventListener('mousemove', onMouseMove);
+            });
+        });
+
+        function onMouseMove(e) {
+            if (isDragging) {
+                const scrollbarRect = customScrollbar.getBoundingClientRect();
+                const thumbPosition = e.clientY - scrollbarRect.top - scrollThumb.offsetHeight / 2;
+                const maxThumbPosition = customScrollbar.offsetHeight - scrollThumb.offsetHeight;
+                const newThumbPosition = Math.max(0, Math.min(thumbPosition, maxThumbPosition));
+
+                const scrollPercentage = newThumbPosition / maxThumbPosition;
+                content.scrollTop = scrollPercentage * (content.scrollHeight - content.offsetHeight);
+
+                scrollThumb.style.top = `${newThumbPosition}px`;
+            }
+        }
+    </script>
+</body>
+</html>
