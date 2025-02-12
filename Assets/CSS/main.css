@@ -799,6 +799,9 @@
   .w-6\/10 {
     width: calc(6/10 * 100%);
   }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
+  }
   .w-\[3px\] {
     width: 3px;
   }
@@ -1365,6 +1368,10 @@
     --tw-leading: 14px;
     line-height: 14px;
   }
+  .leading-\[15px\] {
+    --tw-leading: 15px;
+    line-height: 15px;
+  }
   .leading-\[16px\] {
     --tw-leading: 16px;
     line-height: 16px;
@@ -1380,10 +1387,6 @@
   .leading-\[13px\] {
     --tw-leading: 13px;
     line-height: 13px;
-  }
-  .leading-\[15px\] {
-    --tw-leading: 15px;
-    line-height: 15px;
   }
   .leading-\[17px\] {
     --tw-leading: 17px;
