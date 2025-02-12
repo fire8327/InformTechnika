@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример страницы расчета</title>
+    <link rel="stylesheet" href="../Assets/CSS/main.css">
+</head>
+<body class="flex flex-col min-h-screen bg-[#F8F9FB]">
+    <main class="grow mt-9 mb-[76px] flex flex-col gap-9 max-w-[1200px] mx-auto w-full text-[#333333]">
+        <div class="flex items-center justify-between text-[13px] leading-[20px] text-[#777777]">
+            <nav class="flex items-center justify-center gap-[11px]">
+                <a href="#">Профиль</a>
+                <div class="w-[13px] h-px bg-[#777777]"></div>
+                <a href="#">Управление расчетами</a>
+                <div class="w-[13px] h-px bg-[#777777]"></div>
+                <p>Расчет №00014523</p>
+            </nav>
+            <div class="flex items-center gap-6">
+                <label class="flex items-center gap-4 cursor-pointer group">
+                    <p class="text-[13px] leading-[20px] text-[#333333]">
+                        Экспертный режим 
+                        <span class="text-[#777777] group-has-[input:checked]:inline group-has-[:not(input:checked)]:hidden">(ВКЛ)</span>
+                        <span class="text-[#777777] group-has-[:not(input:checked)]:inline group-has-[input:checked]:hidden">(ВЫКЛ)</span>
+                    </p>
+                    <input type="checkbox" name="mode" class="sr-only">
+                    <div class="w-[33px] h-[18px] relative border border-[#E1E1E1] rounded-[20px] transition-all duration-500 flex items-center px-[2px] group-has-[input:checked]:bg-[#2B7DE0] group-has-[input:checked]:border-[#2B7DE0]">
+                        <div class="w-[14px] h-[14px] bg-[#E1E1E1] rounded-full transition-all duration-500 group-has-[input:checked]:bg-white group-has-[input:checked]:translate-x-full"></div>
+                    </div>
+                </label>
+                <div class="w-px h-5 bg-[#777777]/25"></div>
+                <p>Информтехника | Режаметов Р. Ю. </p>
+            </div>
+        </div>
+        <div class="flex gap-6">
+            <div class="w-1/5 flex flex-col gap-6">
+                <div class="bg-white border border-[#EFF1F5] rounded-[4px] flex flex-col">
+                    <div class="p-6 flex flex-col gap-6">
+                        <p class="text-[10px] leading-[13px] text-[#777777] uppercase">РАСЧЕТ</p>
+                        <div class="flex flex-col gap-4">
+                            <p class="text-[#333333] text-[22px] leading-[15px] font-boxed">MXA2C3E5G7XYZ</p>   
+                            <p class="p-3 rounded-[2px] bg-[#EFF1F5] text-[#777777] text-[13px] leading-[18px]">Наименование текущего выбранного расчета</p>
+                        </div>
+                        <div class="flex flex-col gap-2 text-[11px] leading-[16px]">
+                            <button class="w-full rounded-[2px] flex items-center justify-center gap-2 py-3 cursor-pointer transition-all duration-500 bg-[#2B7DE0] border border-[#2B7DE0] hover:bg-[#468DE4] hover:border-[#468DE4] active:[box-shadow:inset_0_3px_8px_0_rgb(0_0_0_/_0.15)]">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.6875 2.375V13.625H3.3125V2.375H12.6875ZM12.6875 1.4375H3.3125C3.06386 1.4375 2.8254 1.53627 2.64959 1.71209C2.47377 1.8879 2.375 2.12636 2.375 2.375V13.625C2.375 13.8736 2.47377 14.1121 2.64959 14.2879C2.8254 14.4637 3.06386 14.5625 3.3125 14.5625H12.6875C12.9361 14.5625 13.1746 14.4637 13.3504 14.2879C13.5262 14.1121 13.625 13.8736 13.625 13.625V2.375C13.625 2.12636 13.5262 1.8879 13.3504 1.71209C13.1746 1.53627 12.9361 1.4375 12.6875 1.4375Z" fill="white"/>
+                                    <path d="M4.71875 11.2812H5.65625V12.2188H4.71875V11.2812ZM10.3438 11.2812H11.2812V12.2188H10.3438V11.2812ZM4.71875 8.9375H5.65625V9.875H4.71875V8.9375ZM10.3438 8.9375H11.2812V9.875H10.3438V8.9375ZM4.71875 6.59375H5.65625V7.53125H4.71875V6.59375ZM7.53125 11.2812H8.46875V12.2188H7.53125V11.2812ZM7.53125 8.9375H8.46875V9.875H7.53125V8.9375ZM7.53125 6.59375H8.46875V7.53125H7.53125V6.59375ZM10.3438 6.59375H11.2812V7.53125H10.3438V6.59375ZM4.71875 3.78125H11.2812V5.1875H4.71875V3.78125Z" fill="white"/>
+                                </svg>
+                                <span class="text-white uppercase">рассчитать</span>
+                            </button>
+                            <button class="w-full rounded-[2px] flex items-center justify-center gap-2 py-3 group cursor-pointer transition-all duration-500 border border-[#BFD8F6] hover:bg-[#468DE4] hover:border-[#468DE4] active:[box-shadow:inset_0_3px_8px_0_rgb(0_0_0_/_0.15)]">
+                                <svg class="fill-[#2B7DE0] transition-all duration-500 group-hover:fill-white" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.25 2.375V13.0391L7.92187 11.3562L7.5 11.1453L7.07813 11.3562L3.75 13.0391V2.375H11.25ZM11.25 1.4375H3.75C3.50136 1.4375 3.2629 1.53627 3.08709 1.71209C2.91127 1.8879 2.8125 2.12636 2.8125 2.375V14.5625L7.5 12.2188L12.1875 14.5625V2.375C12.1875 2.12636 12.0887 1.8879 11.9129 1.71209C11.7371 1.53627 11.4986 1.4375 11.25 1.4375Z"/>
+                                </svg>                                 
+                                <span class="text-[#2B7DE0] transition-all duration-500 group-hover:text-white uppercase">Сохранить</span>
+                            </button>
+                            <button class="w-full rounded-[2px] flex items-center justify-center gap-2 py-3 group cursor-pointer transition-all duration-500 border border-[#BFD8F6] hover:bg-[#468DE4] hover:border-[#468DE4] active:[box-shadow:inset_0_3px_8px_0_rgb(0_0_0_/_0.15)]">
+                                <svg class="fill-[#2B7DE0] transition-all duration-500 group-hover:fill-white" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.1875 14.5625H2.8125C2.56394 14.5623 2.32562 14.4634 2.14986 14.2876C1.9741 14.1119 1.87525 13.8736 1.875 13.625V2.375C1.87525 2.12644 1.9741 1.88812 2.14986 1.71236C2.32562 1.5366 2.56394 1.43775 2.8125 1.4375H12.1875C12.4361 1.43775 12.6744 1.5366 12.8501 1.71236C13.0259 1.88812 13.1248 2.12644 13.125 2.375V13.625C13.1248 13.8736 13.0259 14.1119 12.8501 14.2876C12.6744 14.4634 12.4361 14.5623 12.1875 14.5625ZM2.8125 2.375V13.625H12.1875V2.375H2.8125Z"/>
+                                    <path d="M4.21875 3.78125H9.375V4.71875H4.21875V3.78125ZM4.21875 6.125H7.5V7.0625H4.21875V6.125Z"/>
+                                </svg>                                
+                                <span class="text-[#2B7DE0] transition-all duration-500 group-hover:text-white uppercase">Создать шаблон</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="w-full h-px border-b border-[#EFF1F5] border-dashed"></div>
+                    <button class="py-6 flex items-center justify-center group cursor-pointer">
+                        <svg class="transition-all duration-500 fill-[#2B7DE0] group-hover:fill-[#333333] group-active:fill-[#468DE4]" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.8125 14.5625H9.4375C9.68606 14.5623 9.92438 14.4634 10.1001 14.2877C10.2759 14.1119 10.3748 13.8736 10.375 13.625V12.2188H9.4375V13.625H3.8125V2.37503H9.4375V3.78128H10.375V2.37503C10.3748 2.12647 10.2759 1.88815 10.1001 1.71239C9.92438 1.53663 9.68606 1.43778 9.4375 1.43753H3.8125C3.56394 1.43778 3.32562 1.53663 3.14986 1.71239C2.9741 1.88815 2.87525 2.12647 2.875 2.37503V13.625C2.87525 13.8736 2.9741 14.1119 3.14986 14.2877C3.32562 14.4634 3.56394 14.5623 3.8125 14.5625Z"/>
+                            <path d="M10.6497 10.1497L12.3306 8.46878H5.6875V7.53128H12.3306L10.6497 5.85034L11.3125 5.18753L14.125 8.00003L11.3125 10.8125L10.6497 10.1497Z"/>
+                        </svg>                            
+                        <span class="uppercase text-[11px] leading-[16px] transition-all duration-500 text-[#2B7DE0] group-hover:text-[#333333] group-active:text-[#468DE4]">покинуть расчет</span>
+                    </button>
+                </div>
+                <div class="bg-white border border-[#EFF1F5] rounded-[4px] flex flex-col">
+                    <div class="flex flex-col gap-6 p-6">
+                        <p class="text-[10px] leading-[13px] text-[#777777] uppercase">УПРАВЛЕНИЕ</p>
+                        <div class="flex flex-col gap-4 dropdown">
+                            <button class="flex items-center justify-between cursor-pointer dropdownToggler">
+                                <span class="text-[15px] leading-[20px] font-bold">Система</span>
+                                <svg class="transition-all duration-500" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" fill="#F8F9FB" stroke="#EFF1F5" />
+                                    <g clip-path="url(#clip0_2264_4788)">
+                                        <path d="M6 7.60001L14 7.60001L9.97764 12.4L6 7.60001Z" fill="#333333" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2264_4788">
+                                            <rect width="8" height="8" fill="white" transform="translate(14 6) rotate(90)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>                                    
+                            </button>
+                            <div class="dropdownList">                                
+                                <div class="flex gap-4">
+                                    <div class="w-[3px] h-full rounded-[2px] bg-[#F8F9FB]"></div>
+                                    <div class="flex flex-col gap-2 text-[12px] leading-[18px] text-[#777777]">
+                                        <div class="text-[#2B7DE0] relative">
+                                            <div class="bg-[#2B7DE0] absolute w-[3px] h-[calc(100%+4px)] rounded-[2px] top-1/2 -translate-y-1/2 -left-[18.5px]"></div>
+                                            <p>Системные функции</p>
+                                        </div>
+                                        <p>SIP-Абоненты и SIP-транки системы</p>
+                                        <p>Специальные функции</p>
+                                        <p>Сервис и услуги</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 dropdown">
+                            <button class="flex items-center justify-between cursor-pointer dropdownToggler">
+                                <span class="text-[15px] leading-[20px] font-bold">Узел 1</span>
+                                <svg class="transition-all duration-500" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" fill="#F8F9FB" stroke="#EFF1F5" />
+                                    <g clip-path="url(#clip0_2264_4788)">
+                                        <path d="M6 7.60001L14 7.60001L9.97764 12.4L6 7.60001Z" fill="#333333" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2264_4788">
+                                            <rect width="8" height="8" fill="white" transform="translate(14 6) rotate(90)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>                                    
+                            </button>
+                            <div class="dropdownList">                                
+                                <div class="flex gap-4">
+                                    <div class="w-[3px] h-full rounded-[2px] bg-[#F8F9FB]"></div>
+                                    <div class="flex flex-col gap-2 text-[12px] leading-[18px] text-[#777777]">
+                                        <div class="text-[#2B7DE0] relative">
+                                            <div class="bg-[#2B7DE0] absolute w-[3px] h-[calc(100%+4px)] rounded-[2px] top-1/2 -translate-y-1/2 -left-[18.5px]"></div>
+                                            <p>Серверы узла КАТС</p>
+                                        </div>
+                                        <p>Интерфейсные шлюзы и модули</p>
+                                        <p>Абонентское оборудование</p>
+                                        <p>Дополнительно</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 dropdown">
+                            <button class="flex items-center justify-between cursor-pointer dropdownToggler">
+                                <span class="text-[15px] leading-[20px] font-bold">Узел 2</span>
+                                <svg class="transition-all duration-500 rotate-180" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" fill="#F8F9FB" stroke="#EFF1F5" />
+                                    <g clip-path="url(#clip0_2264_4788)">
+                                        <path d="M6 7.60001L14 7.60001L9.97764 12.4L6 7.60001Z" fill="#333333" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2264_4788">
+                                            <rect width="8" height="8" fill="white" transform="translate(14 6) rotate(90)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>                                    
+                            </button>
+                            <div class="dropdownList hidden">                                
+                                <div class="flex gap-4">
+                                    <div class="w-[3px] h-full rounded-[2px] bg-[#F8F9FB]"></div>
+                                    <div class="flex flex-col gap-2 text-[12px] leading-[18px] text-[#777777]">
+                                        <div class="text-[#2B7DE0] relative">
+                                            <div class="bg-[#2B7DE0] absolute w-[3px] h-[calc(100%+4px)] rounded-[2px] top-1/2 -translate-y-1/2 -left-[18.5px]"></div>
+                                            <p>Серверы узла КАТС</p>
+                                        </div>
+                                        <p>Интерфейсные шлюзы и модули</p>
+                                        <p>Абонентское оборудование</p>
+                                        <p>Дополнительно</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 dropdown">
+                            <button class="flex items-center justify-between cursor-pointer dropdownToggler">
+                                <span class="text-[15px] leading-[20px] font-bold">Узел 3</span>
+                                <svg class="transition-all duration-500 rotate-180" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" fill="#F8F9FB" stroke="#EFF1F5" />
+                                    <g clip-path="url(#clip0_2264_4788)">
+                                        <path d="M6 7.60001L14 7.60001L9.97764 12.4L6 7.60001Z" fill="#333333" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2264_4788">
+                                            <rect width="8" height="8" fill="white" transform="translate(14 6) rotate(90)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>                                    
+                            </button>
+                            <div class="dropdownList hidden">                                
+                                <div class="flex gap-4">
+                                    <div class="w-[3px] h-full rounded-[2px] bg-[#F8F9FB]"></div>
+                                    <div class="flex flex-col gap-2 text-[12px] leading-[18px] text-[#777777]">
+                                        <div class="text-[#2B7DE0] relative">
+                                            <div class="bg-[#2B7DE0] absolute w-[3px] h-[calc(100%+4px)] rounded-[2px] top-1/2 -translate-y-1/2 -left-[18.5px]"></div>
+                                            <p>Серверы узла КАТС</p>
+                                        </div>
+                                        <p>Интерфейсные шлюзы и модули</p>
+                                        <p>Абонентское оборудование</p>
+                                        <p>Дополнительно</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-px border-b border-[#EFF1F5] border-dashed"></div>
+                    <div class="p-4">
+                        <button class="w-full rounded-[2px] flex items-center justify-center gap-2 py-3 cursor-pointer transition-all duration-500 bg-[#2B7DE0] border border-[#2B7DE0] hover:bg-[#468DE4] hover:border-[#468DE4] active:[box-shadow:inset_0_3px_8px_0_rgb(0_0_0_/_0.15)] text-[11px] leading-[16px]">
+                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 2.375C10.5938 2.375 13.125 4.90625 13.125 8C13.125 11.0938 10.5938 13.625 7.5 13.625C4.40625 13.625 1.875 11.0938 1.875 8C1.875 4.90625 4.40625 2.375 7.5 2.375ZM7.5 1.4375C3.89062 1.4375 0.9375 4.39062 0.9375 8C0.9375 11.6094 3.89062 14.5625 7.5 14.5625C11.1094 14.5625 14.0625 11.6094 14.0625 8C14.0625 4.39062 11.1094 1.4375 7.5 1.4375Z" fill="white"/>
+                                <path d="M11.25 7.53125H7.96875V4.25H7.03125V7.53125H3.75V8.46875H7.03125V11.75H7.96875V8.46875H11.25V7.53125Z" fill="white"/>
+                            </svg>                                
+                            <span class="text-white uppercase">добавить узел</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-4/5 flex flex-col gap-6">
+                <div class="flex flex-col bg-white border border-[#EFF1F5] rounded-[4px] w-full dropdown">
+                    <div class="flex items-center justify-between py-5 px-7">
+                        <div class="flex items-center gap-2">
+                            <svg class="mr-1" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.25 21.0938C6.68147 21.0938 7.03125 20.744 7.03125 20.3125C7.03125 19.881 6.68147 19.5312 6.25 19.5312C5.81853 19.5312 5.46875 19.881 5.46875 20.3125C5.46875 20.744 5.81853 21.0938 6.25 21.0938Z" fill="#2B7DE0"/>
+                                <path d="M3.90625 23.4375H21.0938C21.9531 23.4375 22.6562 22.7344 22.6562 21.875V18.75C22.6562 17.8906 21.9531 17.1875 21.0938 17.1875H3.90625C3.04687 17.1875 2.34375 17.8906 2.34375 18.75V21.875C2.34375 22.7344 3.04687 23.4375 3.90625 23.4375ZM3.90625 18.75H21.0938V21.875H3.90625V18.75ZM17.9688 15.625H7.03125C4.44531 15.625 2.34375 13.5234 2.34375 10.9375C2.34375 8.55469 4.13281 6.57813 6.44531 6.28906C7.13281 3.55469 9.63281 1.5625 12.5 1.5625C15.3672 1.5625 17.8672 3.55469 18.5547 6.28906C20.8672 6.57813 22.6562 8.55469 22.6562 10.9375C22.6562 13.5234 20.5547 15.625 17.9688 15.625ZM6.99219 7.8125C6.17069 7.82439 5.38677 8.15867 4.80949 8.74326C4.2322 9.32785 3.9078 10.1159 3.90625 10.9375C3.90625 12.6641 5.30469 14.0625 7.03125 14.0625H17.9688C19.6953 14.0625 21.0938 12.6641 21.0938 10.9375C21.0938 10.1168 20.771 9.32892 20.1951 8.7442C19.6191 8.15948 18.8363 7.82481 18.0156 7.8125L17.9219 7.82031L17.2344 7.83594L17.1406 7.14844C16.8047 4.85156 14.8125 3.125 12.5 3.125C10.1875 3.125 8.19531 4.85156 7.86719 7.14844L7.77344 7.83594L6.99219 7.8125Z" fill="#2B7DE0"/>
+                            </svg>
+                            <p><span class="text-[#333333] text-2xl leading-[17px] font-boxed">Система</span> <span class="text-[#777777] text-[13px] leading-[18px]">Наименование узла</span></p>
+                            <button class="group">
+                                <svg class="transition-all duration-500 fill-[#2B7DE0] cursor-pointer group-hover:" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 9.75H11.25V10.5H0.75V9.75ZM9.525 3.375C9.825 3.075 9.825 2.625 9.525 2.325L8.175 0.975C7.875 0.675 7.425 0.675 7.125 0.975L1.5 6.6V9H3.9L9.525 3.375ZM7.65 1.5L9 2.85L7.875 3.975L6.525 2.625L7.65 1.5ZM2.25 8.25V6.9L6 3.15L7.35 4.5L3.6 8.25H2.25Z"/>
+                                </svg>                                
+                            </button>
+                        </div>
+                        <button class="dropdownToggler cursor-pointer">
+                            <svg class="transition-all duration-500" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.35469 9.83281L12.5 14.9766L17.6453 9.83203L18.75 10.9375L12.5 17.1875L6.25 10.9375L7.35469 9.83281Z"
+                                    fill="#333333" />
+                                <mask id="path-2-inside-1_2276_5063" fill="white">
+                                    <path
+                                        d="M23.4375 12.5C23.4375 18.5312 18.5312 23.4375 12.5 23.4375C6.46875 23.4375 1.5625 18.5312 1.5625 12.5C1.5625 6.46875 6.46875 1.5625 12.5 1.5625C18.5312 1.5625 23.4375 6.46875 23.4375 12.5ZM3.125 12.5C3.125 17.6695 7.33047 21.875 12.5 21.875C17.6695 21.875 21.875 17.6695 21.875 12.5C21.875 7.33047 17.6695 3.125 12.5 3.125C7.33047 3.125 3.125 7.33047 3.125 12.5Z" />
+                                </mask>
+                                <path
+                                    d="M23.4375 12.5C23.4375 18.5312 18.5312 23.4375 12.5 23.4375C6.46875 23.4375 1.5625 18.5312 1.5625 12.5C1.5625 6.46875 6.46875 1.5625 12.5 1.5625C18.5312 1.5625 23.4375 6.46875 23.4375 12.5ZM3.125 12.5C3.125 17.6695 7.33047 21.875 12.5 21.875C17.6695 21.875 21.875 17.6695 21.875 12.5C21.875 7.33047 17.6695 3.125 12.5 3.125C7.33047 3.125 3.125 7.33047 3.125 12.5Z"
+                                    fill="#F8F9FB" />
+                                <path
+                                    d="M17.1875 12.5C17.1875 15.0795 15.0795 17.1875 12.5 17.1875V29.6875C21.983 29.6875 29.6875 21.983 29.6875 12.5H17.1875ZM12.5 17.1875C9.92053 17.1875 7.8125 15.0795 7.8125 12.5H-4.6875C-4.6875 21.983 3.01697 29.6875 12.5 29.6875V17.1875ZM7.8125 12.5C7.8125 9.92053 9.92053 7.8125 12.5 7.8125V-4.6875C3.01697 -4.6875 -4.6875 3.01697 -4.6875 12.5H7.8125ZM12.5 7.8125C15.0795 7.8125 17.1875 9.92053 17.1875 12.5H29.6875C29.6875 3.01697 21.983 -4.6875 12.5 -4.6875V7.8125ZM-3.125 12.5C-3.125 21.1213 3.87869 28.125 12.5 28.125V15.625C10.7822 15.625 9.375 14.2178 9.375 12.5H-3.125ZM12.5 28.125C21.1213 28.125 28.125 21.1213 28.125 12.5H15.625C15.625 14.2178 14.2178 15.625 12.5 15.625V28.125ZM28.125 12.5C28.125 3.87869 21.1213 -3.125 12.5 -3.125V9.375C14.2178 9.375 15.625 10.7822 15.625 12.5H28.125ZM12.5 -3.125C3.87869 -3.125 -3.125 3.87869 -3.125 12.5H9.375C9.375 10.7822 10.7822 9.375 12.5 9.375V-3.125Z"
+                                    fill="#EFF1F5" mask="url(#path-2-inside-1_2276_5063)" />
+                            </svg>                                
+                        </button>
+                    </div>
+                    <div class="dropdownList">
+                        <div class="flex flex-col gap-6">
+                            <div class="py-6 px-8 border-t border-[#EFF1F5] flex flex-col gap-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-[3px] h-5 bg-[#2B7DE0] rounded-[2px]"></div>
+                                    <p class="text-[17px] leading-[20px] font-bold">Системные функции</p>
+                                </div>
+                                <div class="grid grid-cols-3 gap-y-4 gap-x-[97px]">
+                                    <div class="flex items-center gap-1.5">
+                                        <label class="group flex items-center gap-4 cursor-pointer">
+                                            <input type="checkbox" name="system" class="sr-only">
+                                            <div class="flex items-center justify-center border border-[#E1E1E1] rounded-[2px] transition-all duration-500 w-5 h-5 group-has-[input:checked]:bg-[#2B7DE0] group-has-[input:checked]:border-[#2B7DE0]">
+                                                <img src="../Assets/Images/input/check.svg" alt="" class="transition-all duration-500 opacity-0 group-has-[input:checked]:opacity-100">
+                                            </div>
+                                            <span class="text-[15px] leading-[20px]">IVR (автоинформатор)</span>
+                                        </label>
+                                        <div class="relative">
+                                            <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                            <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <label class="group flex items-center gap-4 cursor-pointer">
+                                            <input type="checkbox" name="system" class="sr-only">
+                                            <div class="flex items-center justify-center border border-[#E1E1E1] rounded-[2px] transition-all duration-500 w-5 h-5 group-has-[input:checked]:bg-[#2B7DE0] group-has-[input:checked]:border-[#2B7DE0]">
+                                                <img src="../Assets/Images/input/check.svg" alt="" class="transition-all duration-500 opacity-0 group-has-[input:checked]:opacity-100">
+                                            </div>
+                                            <span class="text-[15px] leading-[20px]">Запись переговоров</span>
+                                        </label>
+                                        <div class="relative">
+                                            <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                            <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <label class="group flex items-center gap-4 cursor-pointer">
+                                            <input checked type="checkbox" name="system" class="sr-only">
+                                            <div class="flex items-center justify-center border border-[#E1E1E1] rounded-[2px] transition-all duration-500 w-5 h-5 group-has-[input:checked]:bg-[#2B7DE0] group-has-[input:checked]:border-[#2B7DE0]">
+                                                <img src="../Assets/Images/input/check.svg" alt="" class="transition-all duration-500 opacity-0 group-has-[input:checked]:opacity-100">
+                                            </div>
+                                            <span class="text-[15px] leading-[20px]">Факс-сервер</span>
+                                        </label>
+                                        <div class="relative">
+                                            <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                            <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <label class="group flex items-center gap-4 cursor-pointer">
+                                            <input checked type="checkbox" name="system" class="sr-only">
+                                            <div class="flex items-center justify-center border border-[#E1E1E1] rounded-[2px] transition-all duration-500 w-5 h-5 group-has-[input:checked]:bg-[#2B7DE0] group-has-[input:checked]:border-[#2B7DE0]">
+                                                <img src="../Assets/Images/input/check.svg" alt="" class="transition-all duration-500 opacity-0 group-has-[input:checked]:opacity-100">
+                                            </div>
+                                            <span class="text-[15px] leading-[20px]">Конференц-связь</span>
+                                        </label>
+                                        <div class="relative">
+                                            <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                            <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <label class="group flex items-center gap-4 cursor-pointer">
+                                            <input type="checkbox" name="system" class="sr-only">
+                                            <div class="flex items-center justify-center border border-[#E1E1E1] rounded-[2px] transition-all duration-500 w-5 h-5 group-has-[input:checked]:bg-[#2B7DE0] group-has-[input:checked]:border-[#2B7DE0]">
+                                                <img src="../Assets/Images/input/check.svg" alt="" class="transition-all duration-500 opacity-0 group-has-[input:checked]:opacity-100">
+                                            </div>
+                                            <span class="text-[15px] leading-[20px]">Система оповещения</span>
+                                        </label>
+                                        <div class="relative">
+                                            <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                            <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>                          
+                            <div class="py-6 px-8 border-t border-[#EFF1F5] flex flex-col gap-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-[3px] h-5 bg-[#2B7DE0] rounded-[2px]"></div>
+                                    <p class="text-[17px] leading-[20px] font-bold">SIP-Абоненты и SIP-транки системы</p>
+                                </div>
+                                <div class="flex justify-between text-[15px] leading-[20px]">
+                                    <div class="flex flex-col gap-4 w-1/2">                                        
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>SIP-абоненты</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input value="2" type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>UC-клиент ПК/мобильный (Росчат)</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-4 w-1/2">
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>SIP-направлений</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                 
+                                </div>
+                            </div>
+                            <div class="py-6 px-8 border-t border-[#EFF1F5] flex flex-col gap-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-[3px] h-5 bg-[#2B7DE0] rounded-[2px]"></div>
+                                    <p class="text-[17px] leading-[20px] font-bold">Специальные функции</p>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <label class="group flex items-center gap-4 cursor-pointer">
+                                        <input type="checkbox" name="copm" class="sr-only">
+                                        <div class="flex items-center justify-center border border-[#E1E1E1] rounded-[2px] transition-all duration-500 w-5 h-5 group-has-[input:checked]:bg-[#2B7DE0] group-has-[input:checked]:border-[#2B7DE0]">
+                                            <img src="../Assets/Images/input/check.svg" alt="" class="transition-all duration-500 opacity-0 group-has-[input:checked]:opacity-100">
+                                        </div>
+                                        <span class="text-[15px] leading-[20px]">Шлюз СОРМ</span>
+                                    </label>
+                                    <div class="relative">
+                                        <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                        <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-6 px-8 border-t border-[#EFF1F5] flex flex-col gap-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-[3px] h-5 bg-[#2B7DE0] rounded-[2px]"></div>
+                                    <p class="text-[17px] leading-[20px] font-bold">Интерфейсные шлюзы и модули</p>
+                                </div>
+                                <div class="flex items-center gap-[104px]">
+                                    <div class="flex items-center gap-1.5">
+                                        <p>Сервисная поддержка</p>
+                                        <div class="relative">
+                                            <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                            <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                        </div>
+                                    </div>
+                                    <select placeholder="123" class="border border-[#E1E1E1] rounded-[2px] py-1 px-[5px] text-[13px] leading-[18px] focus:outline-none">
+                                        <option value="Выбрать..." selected disabled>Выбрать...</option>
+                                        <option value="Вариант 1">Вариант 1</option>
+                                        <option value="Вариант 2">Вариант 2</option>
+                                        <option value="Вариант 3">Вариант 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-white border border-[#EFF1F5] rounded-[4px] w-full dropdown">
+                    <div class="flex items-center justify-between py-5 px-7">
+                        <div class="flex items-center gap-2">
+                            <svg class="mr-1" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.25 21.0938C6.68147 21.0938 7.03125 20.744 7.03125 20.3125C7.03125 19.881 6.68147 19.5312 6.25 19.5312C5.81853 19.5312 5.46875 19.881 5.46875 20.3125C5.46875 20.744 5.81853 21.0938 6.25 21.0938Z" fill="#2B7DE0"/>
+                                <path d="M3.90625 23.4375H21.0938C21.9531 23.4375 22.6562 22.7344 22.6562 21.875V18.75C22.6562 17.8906 21.9531 17.1875 21.0938 17.1875H3.90625C3.04687 17.1875 2.34375 17.8906 2.34375 18.75V21.875C2.34375 22.7344 3.04687 23.4375 3.90625 23.4375ZM3.90625 18.75H21.0938V21.875H3.90625V18.75ZM17.9688 15.625H7.03125C4.44531 15.625 2.34375 13.5234 2.34375 10.9375C2.34375 8.55469 4.13281 6.57813 6.44531 6.28906C7.13281 3.55469 9.63281 1.5625 12.5 1.5625C15.3672 1.5625 17.8672 3.55469 18.5547 6.28906C20.8672 6.57813 22.6562 8.55469 22.6562 10.9375C22.6562 13.5234 20.5547 15.625 17.9688 15.625ZM6.99219 7.8125C6.17069 7.82439 5.38677 8.15867 4.80949 8.74326C4.2322 9.32785 3.9078 10.1159 3.90625 10.9375C3.90625 12.6641 5.30469 14.0625 7.03125 14.0625H17.9688C19.6953 14.0625 21.0938 12.6641 21.0938 10.9375C21.0938 10.1168 20.771 9.32892 20.1951 8.7442C19.6191 8.15948 18.8363 7.82481 18.0156 7.8125L17.9219 7.82031L17.2344 7.83594L17.1406 7.14844C16.8047 4.85156 14.8125 3.125 12.5 3.125C10.1875 3.125 8.19531 4.85156 7.86719 7.14844L7.77344 7.83594L6.99219 7.8125Z" fill="#2B7DE0"/>
+                            </svg>
+                            <p><span class="text-[#333333] text-2xl leading-[17px] font-boxed">Узел 1</span> <span class="text-[#777777] text-[13px] leading-[18px]">Наименование узла</span></p>
+                            <button class="group">
+                                <svg class="transition-all duration-500 fill-[#2B7DE0] cursor-pointer group-hover:" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 9.75H11.25V10.5H0.75V9.75ZM9.525 3.375C9.825 3.075 9.825 2.625 9.525 2.325L8.175 0.975C7.875 0.675 7.425 0.675 7.125 0.975L1.5 6.6V9H3.9L9.525 3.375ZM7.65 1.5L9 2.85L7.875 3.975L6.525 2.625L7.65 1.5ZM2.25 8.25V6.9L6 3.15L7.35 4.5L3.6 8.25H2.25Z"/>
+                                </svg>                                
+                            </button>
+                        </div>
+                        <button class="dropdownToggler cursor-pointer">
+                            <svg class="transition-all duration-500" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.35469 9.83281L12.5 14.9766L17.6453 9.83203L18.75 10.9375L12.5 17.1875L6.25 10.9375L7.35469 9.83281Z"
+                                    fill="#333333" />
+                                <mask id="path-2-inside-1_2276_5063" fill="white">
+                                    <path
+                                        d="M23.4375 12.5C23.4375 18.5312 18.5312 23.4375 12.5 23.4375C6.46875 23.4375 1.5625 18.5312 1.5625 12.5C1.5625 6.46875 6.46875 1.5625 12.5 1.5625C18.5312 1.5625 23.4375 6.46875 23.4375 12.5ZM3.125 12.5C3.125 17.6695 7.33047 21.875 12.5 21.875C17.6695 21.875 21.875 17.6695 21.875 12.5C21.875 7.33047 17.6695 3.125 12.5 3.125C7.33047 3.125 3.125 7.33047 3.125 12.5Z" />
+                                </mask>
+                                <path
+                                    d="M23.4375 12.5C23.4375 18.5312 18.5312 23.4375 12.5 23.4375C6.46875 23.4375 1.5625 18.5312 1.5625 12.5C1.5625 6.46875 6.46875 1.5625 12.5 1.5625C18.5312 1.5625 23.4375 6.46875 23.4375 12.5ZM3.125 12.5C3.125 17.6695 7.33047 21.875 12.5 21.875C17.6695 21.875 21.875 17.6695 21.875 12.5C21.875 7.33047 17.6695 3.125 12.5 3.125C7.33047 3.125 3.125 7.33047 3.125 12.5Z"
+                                    fill="#F8F9FB" />
+                                <path
+                                    d="M17.1875 12.5C17.1875 15.0795 15.0795 17.1875 12.5 17.1875V29.6875C21.983 29.6875 29.6875 21.983 29.6875 12.5H17.1875ZM12.5 17.1875C9.92053 17.1875 7.8125 15.0795 7.8125 12.5H-4.6875C-4.6875 21.983 3.01697 29.6875 12.5 29.6875V17.1875ZM7.8125 12.5C7.8125 9.92053 9.92053 7.8125 12.5 7.8125V-4.6875C3.01697 -4.6875 -4.6875 3.01697 -4.6875 12.5H7.8125ZM12.5 7.8125C15.0795 7.8125 17.1875 9.92053 17.1875 12.5H29.6875C29.6875 3.01697 21.983 -4.6875 12.5 -4.6875V7.8125ZM-3.125 12.5C-3.125 21.1213 3.87869 28.125 12.5 28.125V15.625C10.7822 15.625 9.375 14.2178 9.375 12.5H-3.125ZM12.5 28.125C21.1213 28.125 28.125 21.1213 28.125 12.5H15.625C15.625 14.2178 14.2178 15.625 12.5 15.625V28.125ZM28.125 12.5C28.125 3.87869 21.1213 -3.125 12.5 -3.125V9.375C14.2178 9.375 15.625 10.7822 15.625 12.5H28.125ZM12.5 -3.125C3.87869 -3.125 -3.125 3.87869 -3.125 12.5H9.375C9.375 10.7822 10.7822 9.375 12.5 9.375V-3.125Z"
+                                    fill="#EFF1F5" mask="url(#path-2-inside-1_2276_5063)" />
+                            </svg>                                
+                        </button>
+                    </div>
+                    <div class="dropdownList">
+                        <div class="flex flex-col gap-6">
+                            <div class="py-6 px-8 border-t border-[#EFF1F5] flex flex-col gap-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-[3px] h-5 bg-[#2B7DE0] rounded-[2px]"></div>
+                                    <p class="text-[17px] leading-[20px] font-bold">Серверы узла КАТС</p>
+                                </div>
+                                <div class="flex justify-between text-[15px] leading-[20px]">
+                                    <div class="flex flex-col gap-4 w-1/3">
+                                        <div class="flex items-center gap-4">
+                                            <input value="2" type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>MX-1000-SC-K</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>MX-1000-SC-K 1Тб</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>MX-1000-SC-K 10Тб</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-4 w-1/3">
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>MX-1000-SC-4S</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input value="1" type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>MX-1000-SC-4S 1Тб</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-4 w-1/3">
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>Софтсвич</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="py-6 px-8 border-t border-[#EFF1F5] flex flex-col gap-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-[3px] h-5 bg-[#2B7DE0] rounded-[2px]"></div>
+                                    <p class="text-[17px] leading-[20px] font-bold">Интерфейсные шлюзы и модули</p>
+                                </div>
+                                <div class="flex justify-between text-[15px] leading-[20px]">
+                                    <div class="flex flex-col gap-4 w-1/2">                                        
+                                        <div class="flex items-center gap-4">
+                                            <input value="2" type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>Шлюз MX-1000-8FXO/24FXS</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>Шлюз MX-1000-32FXS</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>Шлюз MX-1000-12E&M</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>Шлюз MX-1000-16ISDN</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-4 w-1/2">
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>Шасси МХ-1000, 6U</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input value="1" type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>Модуль MX-1000-8FXO/24FXS</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>Модуль MX-1000-32FXS</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>Модуль MX-1000-16ISDN</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>Модуль MX-1000-12E&M</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                 
+                                </div>
+                            </div>
+                            <div class="py-6 px-8 border-t border-[#EFF1F5] flex flex-col gap-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-[3px] h-5 bg-[#2B7DE0] rounded-[2px]"></div>
+                                    <p class="text-[17px] leading-[20px] font-bold">Абонентское оборудование</p>
+                                </div>
+                                <div class="flex justify-between text-[15px] leading-[20px]">
+                                    <div class="flex flex-col gap-4 w-1/3">                                        
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>TA-IP-2</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>TA-IP-4</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>КР20 (IP-4)</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>Блок питания TA-IP-4</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-4 w-1/3">
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>PS-CP200T</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>PS-CP400T</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>PS-CP16</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                 
+                                    <div class="flex flex-col gap-4 w-1/3">
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>УГС-2-IP</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <input type="text" class="focus:outline-none py-px w-[46px] h-5 placeholder:text-[#777777] text-center border border-[#E1E1E1] rounded-[2px] text-[13px] leading-[18px]" placeholder="0...5">
+                                            <div class="flex items-center gap-1.5">
+                                                <p>Пульт диспетчера</p>
+                                                <div class="relative">
+                                                    <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                                    <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                 
+                                </div>
+                            </div>
+                            <div class="py-6 px-8 border-t border-[#EFF1F5] flex flex-col gap-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-[3px] h-5 bg-[#2B7DE0] rounded-[2px]"></div>
+                                    <p class="text-[17px] leading-[20px] font-bold">Дополнительно</p>
+                                </div>
+                                <div class="flex items-center gap-[104px]">
+                                    <div class="flex items-center gap-1.5">
+                                        <p>Электропитание узла</p>
+                                        <div class="relative">
+                                            <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer cursor-help">
+                                            <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                                        </div>
+                                    </div>
+                                    <select name="" placeholder="123" class="border border-[#E1E1E1] rounded-[2px] py-1 px-[5px] text-[13px] leading-[18px] focus:outline-none">
+                                        <option value="Выбрать..." selected disabled>Выбрать...</option>
+                                        <option value="Вариант 1">Вариант 1</option>
+                                        <option value="Вариант 2">Вариант 2</option>
+                                        <option value="Вариант 3">Вариант 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="w-full rounded-[2px] flex items-center justify-center gap-2 py-3 cursor-pointer transition-all duration-500 bg-[#2B7DE0] border border-[#2B7DE0] hover:bg-[#468DE4] hover:border-[#468DE4] active:[box-shadow:inset_0_3px_8px_0_rgb(0_0_0_/_0.15)] text-[11px] leading-[16px]">
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.5 2.375C10.5938 2.375 13.125 4.90625 13.125 8C13.125 11.0938 10.5938 13.625 7.5 13.625C4.40625 13.625 1.875 11.0938 1.875 8C1.875 4.90625 4.40625 2.375 7.5 2.375ZM7.5 1.4375C3.89062 1.4375 0.9375 4.39062 0.9375 8C0.9375 11.6094 3.89062 14.5625 7.5 14.5625C11.1094 14.5625 14.0625 11.6094 14.0625 8C14.0625 4.39062 11.1094 1.4375 7.5 1.4375Z" fill="white"/>
+                        <path d="M11.25 7.53125H7.96875V4.25H7.03125V7.53125H3.75V8.46875H7.03125V11.75H7.96875V8.46875H11.25V7.53125Z" fill="white"/>
+                    </svg>                                
+                    <span class="text-white uppercase">добавить узел</span>
+                </button>
+            </div>
+        </div>
+    </main>  
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../Assets/JS/main.js"></script>
+</body>
+</html>
