@@ -19,8 +19,29 @@
                 <p class="text-[#777777] text-[13px] leading-[20px]">Пожалуйста, авторизуйтесь</p>
             </div>
             <div class="flex flex-col gap-9">
-                <div class="flex flex-col gap-6">
-                    
+                <div class="group w-full relative">
+                    <input type="text" placeholder=" " class="w-full border-b border-[#E1E1E1] focus:outline-none pb-3 peer" required>
+                    <p class="text-[#777777] absolute top-0 pointer-events-none transition-all duration-500 peer-[&:not(:placeholder-shown)]:text-[13px] peer-[&:not(:placeholder-shown)]:leading-[18px] peer-[&:not(:placeholder-shown)]:-top-[25px]">Логин или Электронная почта <span class="text-[#FB5F5F]">*</span></p>
+                    <img src="../Assets/Images/input/valid.svg" alt="" class="absolute top-[3px] right-0">
+                </div>
+                <div class="group w-full relative">
+                    <input type="text" placeholder=" " class="w-full border-b border-[#E1E1E1] focus:outline-none pb-3 peer" required>
+                    <p class="text-[#777777] absolute top-0 pointer-events-none transition-all duration-500 peer-[&:not(:placeholder-shown)]:text-[13px] peer-[&:not(:placeholder-shown)]:leading-[18px] peer-[&:not(:placeholder-shown)]:-top-[25px]">Пароль <span class="text-[#FB5F5F]">*</span></p>
+                    <img src="../Assets/Images/input/invalid.svg" alt="" class="absolute top-[3px] right-0">
+                    <p class="mt-[7px] text-[13px] leading-[18px] text-[#FB5F5F]">Описание возникшей ошибки</p>
+                </div>
+                <div class="flex items-center -mt-3 gap-1.5">
+                    <label class="group flex items-center gap-4 cursor-pointer">
+                        <input type="checkbox" name="agree" class="sr-only">
+                        <div class="flex items-center justify-center border border-[#E1E1E1] rounded-[2px] transition-all duration-500 w-5 h-5 group-has-[input:checked]:bg-[#2B7DE0] group-has-[input:checked]:border-[#2B7DE0]">
+                            <img src="../Assets/Images/input/check.svg" alt="" class="transition-all duration-500 opacity-0 group-has-[input:checked]:opacity-100">
+                        </div>
+                        <span class="text-[15px] leading-[20px]">Запомнить на этом компьютере</span>
+                    </label>
+                    <div class="relative group">
+                        <img src="../Assets/Images/input/info.svg" tabindex="0" alt="" class="peer">
+                        <p class="absolute left-1/2 -translate-x-1/2 peer-focus:block hidden bottom-[28px] shadow-[0_7px_16px_-9px_#00000026] p-3 bg-white z-[3] border border-[#EFF1F5] w-[274px] text-[13px] leading-[18px] text-[#777777] rounded-[4px]">Небольшая подсказка, рассказывающая о том, что значит конкретный блок. Важную информацию можно акцентировать <span class="font-bold text-[#333333]">цветом и шрифтом.</span></p>
+                    </div>
                 </div>
                 <button class="w-full py-3 text-center text-white rounded-[2px] border border-[#2B7DE0] bg-[#2B7DE0] transition-all duration-500 cursor-pointer hover:bg-[#468DE4] hover:border-[#468DE4] active:[box-shadow:inset_0_3px_8px_0_rgb(0_0_0_/_0.15)]">
                     <span class="text-white text-[11px] leading-[16px] uppercase">войти</span>
