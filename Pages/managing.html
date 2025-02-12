@@ -7,6 +7,38 @@
     <link rel="stylesheet" href="../Assets/CSS/main.css">
 </head>
 <body class="flex flex-col min-h-screen bg-[#F8F9FB]">
+    <header class="px-11 py-7 bg-white flex items-center justify-between text-[#333333]">
+        <nav class="flex items-center gap-[92px]">
+            <button class="cursor-pointer">
+                <img src="../Assets/Images/header/menu.svg" alt="">
+            </button>
+            <div class="flex items-center gap-11 text-sm leading-[135%] font-bold uppercase">
+                <a href="#">
+                    <img src="../Assets/Images/header/logo.svg" alt="">
+                </a>
+                <a href="#">Компания</a>
+                <a href="#">Продукция</a>
+                <a href="#">Решения</a>
+                <a href="#">Партнерам</a>
+                <a href="#">Поддержка</a>
+                <a href="#">Контакты</a>
+            </div>
+        </nav>
+        <div class="flex items-center gap-[30px]">
+            <select class="text-sm leading-[135%] focus:outline-none">
+                <option value="RU">RU</option>
+                <option value="EN">EN</option>
+            </select>
+            <div class="flex flex-col items-start">
+                <a href="tel:+7 (945) 662-73-21" class="text-base font-bold leading-[135%]">+7 (945) 662-73-21</a>
+                <button class="uppercase text-[10px] leading-[13px] text-[#2B7DE0] cursor-pointer">заказать звонок</button>
+            </div>
+            <button class="cursor-pointer">
+                <img src="../Assets/Images/header/search.svg" alt="">
+            </button>
+        </div>
+    </header>
+
     <main class="grow mt-9 mb-[76px] flex flex-col gap-9 max-w-[1200px] mx-auto w-full text-[#333333]">
         <div class="flex items-center justify-between text-[#777777] text-[13px] leading-[20px]">
             <nav class="flex items-center justify-center gap-[11px]">
@@ -346,6 +378,91 @@
             </button>
         </div>
     </main>  
+
+    <footer class="bg-[#2F3338] px-11 py-20 mt-auto">
+        <div class="flex flex-col gap-[60px] max-w-[1200px] mx-auto">
+            <div class="flex items-start justify-between text-white gap-5">
+                <div class="flex flex-col gap-5 max-w-[158px]">
+                    <p class="uppercase text-sm font-bold leading-[20px]">КОМПАНИЯ</p>
+                    <div class="flex flex-col gap-2 text-[13px] leading-[20px] opacity-50">
+                        <a href="#">Производство</a>
+                        <a href="#">Клиенты</a>
+                        <a href="#">Пресс-центр</a>
+                        <a href="#">Наши проекты</a>
+                        <a href="#">Лицензии и сертификаты</a>
+                        <a href="#">Карьера</a>
+                        <a href="#">Официальные документы</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-5 max-w-[231px]">
+                    <p class="uppercase text-sm font-bold leading-[20px]">ПРОДУКЦИЯ</p>
+                    <div class="flex flex-col gap-2 text-[13px] leading-[20px] opacity-50">
+                        <a href="#">Проводная связь</a>
+                        <a href="#">Транкинговая радиосвязь стандарта TETRA</a>
+                        <a href="#">Микросотовая радиосвязь стандарта DECT</a>
+                        <a href="#">Оборудование для построения сетей передачи данных</a>
+                        <a href="#">Дополнительные решения для систем связи</a>
+                        <a href="#">Полный каталог продукции</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-5 max-w-[170px]">
+                    <p class="uppercase text-sm font-bold leading-[20px]">РЕШЕНИЯ</p>
+                    <div class="flex flex-col gap-2 text-[13px] leading-[20px] opacity-50">
+                        <a href="#">Унифицированные коммуникации</a>
+                        <a href="#">Подвижная радиосвязь стандарта TETRA</a>
+                        <a href="#">Корпоративный мессенджер РОСЧАТ</a>
+                        <a href="#">Softswitch МиниКом MX-1000</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <p class="uppercase text-sm font-bold leading-[20px]">КОНТАКТЫ</p>
+                </div>
+                <div class="flex flex-col gap-11 max-w-[277px] grow">
+                    <button class="rounded-[2px] py-[15px] px-5 bg-[#42454A] gap-[60px] w-full flex items-center">
+                        <span class="text-[11px] leading-[16px] text-white uppercase">подписка на рассылку</span>
+                        <img src="../Assets/Images/footer/tg.svg" alt="">
+                    </button>
+                    <div class="flex flex-col gap-[22px]">
+                        <div class="flex items-start gap-5">
+                            <img src="../Assets/Images/footer/phone.svg" alt="" class="mt-1.5">
+                            <div class="flex flex-col items-start gap-1">
+                                <a href="tel:+7 (945) 662-73-21" class="text-base font-bold leading-[135%] flex items-center gap-2 text-white">
+                                    <span>+7 (945) 662-73-21</span>
+                                    <img src="../Assets/Images/footer/arrow.svg" alt="">
+                                </a>
+                                <button class="uppercase text-[10px] leading-[13px] text-white/50 cursor-pointer">заказать звонок</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col text-white">
+                            <div class="flex items-center gap-[18px]">
+                                <img src="../Assets/Images/footer/mail.svg" alt="">
+                                <a href="mailto:contact@infotek.ru">contact@infotek.ru</a>
+                            </div>
+                            <div class="flex items-center gap-[18px]">
+                                <img src="../Assets/Images/footer/mail.svg" alt="">
+                                <a href="mailto:service@infotek.ru">service@infotek.ru</a>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <img src="../Assets/Images/footer/location.svg" alt="" class="mt-[3px]">
+                            <p class="text-white text-[15px] leading-[20px]">107140, г. Москва, ул. Верхняя Красносельская, д.2/1, стр.1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full h-px bg-[#D9D9D9] opacity-15"></div>
+            <div class="flex items-start justify-between text-white/50">
+                <p class="text-[13px] leading-[18px]">© 2024 Все права защищены.</p>
+                <div class="flex items-start gap-[42px] uppercase text-[10px] leading-[13px]">
+                    <div class="flex flex-col gap-1">
+                        <a href="#">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+                        <a href="#">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
+                    </div>
+                    <a href="#">ВЕРСИЯ ДЛЯ ПЕЧАТИ</a>
+                </div>
+            </div>
+        </div> 
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
